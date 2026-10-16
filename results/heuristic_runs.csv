@@ -1,0 +1,751 @@
+world,condition,seed,backend,theory,iterations,n_tests,n_props,recall_exact,recall_variable,false_props,wrong_scope,perfect,any_false
+main,single_pass,0,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,0,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,0,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,1,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,1,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,1,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,2,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,2,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,2,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,3,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,3,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,3,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,4,heuristic,verified raises legitimacy ; royalty lowers legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,4,heuristic,verified raises legitimacy ; royalty lowers legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,4,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,5,heuristic,verified raises legitimacy ; roadmap_len lowers legitimacy ; community lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+main,loop,5,heuristic,verified raises legitimacy ; roadmap_len lowers legitimacy ; community lowers legitimacy,1,55,3,1.0,1.0,2,0,0,1
+main,loop_holdout,5,heuristic,verified raises legitimacy,1,58,1,1.0,1.0,0,0,1,0
+main,single_pass,6,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,6,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,6,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,7,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,7,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,7,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,8,heuristic,verified raises legitimacy ; mint_hour lowers legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,8,heuristic,verified raises legitimacy ; mint_hour lowers legitimacy when verified=1,2,61,2,1.0,1.0,1,0,0,1
+main,loop_holdout,8,heuristic,verified raises legitimacy,2,63,1,1.0,1.0,0,0,1,0
+main,single_pass,9,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,9,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,9,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,10,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,10,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,10,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,11,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,11,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,11,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,12,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,12,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,12,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,13,heuristic,verified raises legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,13,heuristic,verified raises legitimacy ; creator_rep raises legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,13,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,14,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,14,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,14,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,15,heuristic,verified raises legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,15,heuristic,verified raises legitimacy ; creator_rep raises legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,15,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,16,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,16,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,16,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,17,heuristic,verified raises legitimacy ; supply_log lowers legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,17,heuristic,verified raises legitimacy ; supply_log lowers legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,17,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,18,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,18,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,18,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,19,heuristic,verified raises legitimacy ; creator_rep lowers legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,19,heuristic,verified raises legitimacy ; creator_rep lowers legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,19,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,20,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,20,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,20,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,21,heuristic,verified raises legitimacy ; royalty raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,21,heuristic,verified raises legitimacy ; royalty raises legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,21,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,22,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,22,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,22,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,23,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,23,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,23,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,24,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,24,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,24,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,25,heuristic,verified raises legitimacy ; wash_share raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,25,heuristic,verified raises legitimacy ; wash_share raises legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,25,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,26,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,26,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,26,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,27,heuristic,verified raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,27,heuristic,verified raises legitimacy ; wash_share lowers legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,27,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,28,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,28,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,28,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,29,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,29,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,29,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,30,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,30,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,30,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,31,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,31,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,31,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,32,heuristic,verified raises legitimacy ; wash_share lowers legitimacy ; mint_hour raises legitimacy,0,10,3,1.0,1.0,2,0,0,1
+main,loop,32,heuristic,verified raises legitimacy ; wash_share lowers legitimacy ; mint_hour raises legitimacy,1,55,3,1.0,1.0,2,0,0,1
+main,loop_holdout,32,heuristic,verified raises legitimacy,1,58,1,1.0,1.0,0,0,1,0
+main,single_pass,33,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,33,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,33,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,34,heuristic,verified raises legitimacy ; roadmap_len lowers legitimacy ; bear_launch lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+main,loop,34,heuristic,verified raises legitimacy ; roadmap_len lowers legitimacy ; bear_launch lowers legitimacy,1,52,3,1.0,1.0,2,0,0,1
+main,loop_holdout,34,heuristic,verified raises legitimacy,1,55,1,1.0,1.0,0,0,1,0
+main,single_pass,35,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,35,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,35,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,36,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,36,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,36,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,37,heuristic,verified raises legitimacy ; roadmap_len raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,37,heuristic,verified raises legitimacy ; roadmap_len raises legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,37,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,38,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,38,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,38,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,39,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,39,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,39,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,40,heuristic,verified raises legitimacy ; bear_launch lowers legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,40,heuristic,verified raises legitimacy ; bear_launch lowers legitimacy,1,36,2,1.0,1.0,1,0,0,1
+main,loop_holdout,40,heuristic,verified raises legitimacy,1,38,1,1.0,1.0,0,0,1,0
+main,single_pass,41,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,41,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,41,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,42,heuristic,verified raises legitimacy ; bear_launch lowers legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,42,heuristic,verified raises legitimacy ; bear_launch lowers legitimacy,1,36,2,1.0,1.0,1,0,0,1
+main,loop_holdout,42,heuristic,verified raises legitimacy,1,38,1,1.0,1.0,0,0,1,0
+main,single_pass,43,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,43,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,43,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,44,heuristic,verified raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,44,heuristic,verified raises legitimacy ; wash_share lowers legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,44,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,45,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,45,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,45,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,46,heuristic,verified raises legitimacy ; roadmap_len raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,46,heuristic,verified raises legitimacy ; roadmap_len raises legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,46,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,47,heuristic,roadmap_len raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+main,loop,47,heuristic,roadmap_len raises legitimacy ; verified raises legitimacy,1,39,2,1.0,1.0,1,0,0,1
+main,loop_holdout,47,heuristic,verified raises legitimacy,1,41,1,1.0,1.0,0,0,1,0
+main,single_pass,48,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,48,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,48,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+main,single_pass,49,heuristic,verified raises legitimacy,0,10,1,1.0,1.0,0,0,1,0
+main,loop,49,heuristic,verified raises legitimacy,1,23,1,1.0,1.0,0,0,1,0
+main,loop_holdout,49,heuristic,verified raises legitimacy,1,24,1,1.0,1.0,0,0,1,0
+scope,single_pass,0,heuristic,bear_launch raises legitimacy,0,10,1,0.0,1.0,0,1,0,0
+scope,loop,0,heuristic,bear_launch raises legitimacy when verified=1,2,32,1,1.0,1.0,0,0,1,0
+scope,loop_holdout,0,heuristic,bear_launch raises legitimacy when verified=1,2,34,1,1.0,1.0,0,0,1,0
+scope,single_pass,1,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,1,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,1,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,2,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,2,heuristic,verified raises legitimacy ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,1,0,0
+scope,loop_holdout,2,heuristic,verified raises legitimacy ; bear_launch raises legitimacy when verified=1,2,61,2,1.0,1.0,0,1,0,0
+scope,single_pass,3,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,3,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,3,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,4,heuristic,bear_launch raises legitimacy ; royalty lowers legitimacy,0,10,2,0.0,1.0,1,1,0,1
+scope,loop,4,heuristic,bear_launch raises legitimacy ; royalty lowers legitimacy,1,39,2,0.0,1.0,1,1,0,1
+scope,loop_holdout,4,heuristic,,1,41,0,0.0,0.0,0,0,0,0
+scope,single_pass,5,heuristic,bear_launch raises legitimacy ; verified raises legitimacy ; roadmap_len lowers legitimacy,0,10,3,0.0,1.0,1,2,0,1
+scope,loop,5,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1 ; roadmap_len lowers legitimacy,2,86,3,1.0,1.0,1,0,0,1
+scope,loop_holdout,5,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,91,2,1.0,1.0,0,0,1,0
+scope,single_pass,6,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,6,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,6,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,7,heuristic,verified raises legitimacy,0,10,1,0.0,1.0,0,1,0,0
+scope,loop,7,heuristic,verified raises legitimacy when bear_launch=1,2,32,1,1.0,1.0,0,0,1,0
+scope,loop_holdout,7,heuristic,verified raises legitimacy when bear_launch=1,2,34,1,1.0,1.0,0,0,1,0
+scope,single_pass,8,heuristic,verified raises legitimacy ; bear_launch raises legitimacy ; mint_hour lowers legitimacy,0,10,3,0.0,1.0,1,2,0,1
+scope,loop,8,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1 ; mint_hour lowers legitimacy when verified=1,2,79,3,1.0,1.0,1,0,0,1
+scope,loop_holdout,8,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,84,2,1.0,1.0,0,0,1,0
+scope,single_pass,9,heuristic,bear_launch raises legitimacy,0,10,1,0.0,1.0,0,1,0,0
+scope,loop,9,heuristic,bear_launch raises legitimacy,1,23,1,0.0,1.0,0,1,0,0
+scope,loop_holdout,9,heuristic,,1,24,0,0.0,0.0,0,0,0,0
+scope,single_pass,10,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,10,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,10,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,11,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,11,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,11,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,12,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,12,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,12,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,13,heuristic,verified raises legitimacy ; bear_launch raises legitimacy ; creator_rep raises legitimacy,0,10,3,0.0,1.0,1,2,0,1
+scope,loop,13,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1 ; creator_rep raises legitimacy,2,86,3,1.0,1.0,1,0,0,1
+scope,loop_holdout,13,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,91,2,1.0,1.0,0,0,1,0
+scope,single_pass,14,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,14,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,14,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,15,heuristic,verified raises legitimacy ; bear_launch raises legitimacy ; creator_rep raises legitimacy,0,10,3,0.0,1.0,1,2,0,1
+scope,loop,15,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1 ; creator_rep raises legitimacy,2,86,3,1.0,1.0,1,0,0,1
+scope,loop_holdout,15,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,91,2,1.0,1.0,0,0,1,0
+scope,single_pass,16,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,16,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,16,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,17,heuristic,bear_launch raises legitimacy ; supply_log lowers legitimacy ; roadmap_len raises legitimacy,0,10,3,0.0,1.0,2,1,0,1
+scope,loop,17,heuristic,bear_launch raises legitimacy ; supply_log lowers legitimacy ; roadmap_len raises legitimacy,1,55,3,0.0,1.0,2,1,0,1
+scope,loop_holdout,17,heuristic,bear_launch raises legitimacy,1,58,1,0.0,1.0,0,1,0,0
+scope,single_pass,18,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,18,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,18,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,19,heuristic,verified raises legitimacy ; creator_rep lowers legitimacy,0,10,2,0.0,1.0,1,1,0,1
+scope,loop,19,heuristic,verified raises legitimacy when bear_launch=1 ; creator_rep lowers legitimacy,2,64,2,1.0,1.0,1,0,0,1
+scope,loop_holdout,19,heuristic,verified raises legitimacy when bear_launch=1,2,67,1,1.0,1.0,0,0,1,0
+scope,single_pass,20,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,20,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,20,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,21,heuristic,verified raises legitimacy ; bear_launch raises legitimacy ; royalty raises legitimacy,0,10,3,0.0,1.0,1,2,0,1
+scope,loop,21,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1 ; royalty raises legitimacy,2,86,3,1.0,1.0,1,0,0,1
+scope,loop_holdout,21,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,2,93,2,0.0,1.0,0,2,0,0
+scope,single_pass,22,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,22,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,22,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,23,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,23,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,23,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,24,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,24,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,24,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,25,heuristic,verified raises legitimacy ; bear_launch raises legitimacy ; wash_share raises legitimacy,0,10,3,0.0,1.0,1,2,0,1
+scope,loop,25,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1 ; wash_share raises legitimacy,2,86,3,1.0,1.0,1,0,0,1
+scope,loop_holdout,25,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,91,2,1.0,1.0,0,0,1,0
+scope,single_pass,26,heuristic,verified raises legitimacy ; bear_launch raises legitimacy ; supply_log raises legitimacy,0,10,3,0.0,1.0,1,2,0,1
+scope,loop,26,heuristic,verified raises legitimacy ; bear_launch raises legitimacy ; supply_log raises legitimacy,1,52,3,0.0,1.0,1,2,0,1
+scope,loop_holdout,26,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,1,55,2,0.0,1.0,0,2,0,0
+scope,single_pass,27,heuristic,verified raises legitimacy ; bear_launch raises legitimacy ; wash_share lowers legitimacy,0,10,3,0.0,1.0,1,2,0,1
+scope,loop,27,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1 ; wash_share lowers legitimacy,2,86,3,1.0,1.0,1,0,0,1
+scope,loop_holdout,27,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,91,2,1.0,1.0,0,0,1,0
+scope,single_pass,28,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,28,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,1,36,2,0.0,1.0,0,2,0,0
+scope,loop_holdout,28,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,1,38,2,0.0,1.0,0,2,0,0
+scope,single_pass,29,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,29,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,29,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,30,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,30,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,30,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,31,heuristic,verified raises legitimacy,0,10,1,0.0,1.0,0,1,0,0
+scope,loop,31,heuristic,verified raises legitimacy when bear_launch=1,2,32,1,1.0,1.0,0,0,1,0
+scope,loop_holdout,31,heuristic,verified raises legitimacy,2,35,1,0.0,1.0,0,1,0,0
+scope,single_pass,32,heuristic,wash_share lowers legitimacy ; verified raises legitimacy ; art_entropy lowers legitimacy,0,10,3,0.0,1.0,2,1,0,1
+scope,loop,32,heuristic,wash_share lowers legitimacy ; verified raises legitimacy when bear_launch=1 ; art_entropy lowers legitimacy,2,96,3,1.0,1.0,2,0,0,1
+scope,loop_holdout,32,heuristic,verified raises legitimacy when bear_launch=1,2,100,1,1.0,1.0,0,0,1,0
+scope,single_pass,33,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,33,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,1,36,2,0.0,1.0,0,2,0,0
+scope,loop_holdout,33,heuristic,verified raises legitimacy,1,38,1,0.0,1.0,0,1,0,0
+scope,single_pass,34,heuristic,verified raises legitimacy ; roadmap_len lowers legitimacy,0,10,2,0.0,1.0,1,1,0,1
+scope,loop,34,heuristic,verified raises legitimacy when bear_launch=1 ; roadmap_len lowers legitimacy,2,64,2,1.0,1.0,1,0,0,1
+scope,loop_holdout,34,heuristic,verified raises legitimacy when bear_launch=1,2,67,1,1.0,1.0,0,0,1,0
+scope,single_pass,35,heuristic,,0,10,0,0.0,0.0,0,0,0,0
+scope,loop,35,heuristic,,1,10,0,0.0,0.0,0,0,0,0
+scope,loop_holdout,35,heuristic,,1,10,0,0.0,0.0,0,0,0,0
+scope,single_pass,36,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,36,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,36,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,37,heuristic,verified raises legitimacy ; bear_launch raises legitimacy ; roadmap_len raises legitimacy,0,10,3,0.0,1.0,1,2,0,1
+scope,loop,37,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1 ; roadmap_len raises legitimacy,2,86,3,1.0,1.0,1,0,0,1
+scope,loop_holdout,37,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,91,2,1.0,1.0,0,0,1,0
+scope,single_pass,38,heuristic,verified raises legitimacy,0,10,1,0.0,1.0,0,1,0,0
+scope,loop,38,heuristic,verified raises legitimacy,1,23,1,0.0,1.0,0,1,0,0
+scope,loop_holdout,38,heuristic,verified raises legitimacy,1,24,1,0.0,1.0,0,1,0,0
+scope,single_pass,39,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,39,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,39,heuristic,bear_launch raises legitimacy,2,60,1,0.0,1.0,0,1,0,0
+scope,single_pass,40,heuristic,verified raises legitimacy,0,10,1,0.0,1.0,0,1,0,0
+scope,loop,40,heuristic,verified raises legitimacy when bear_launch=1,2,32,1,1.0,1.0,0,0,1,0
+scope,loop_holdout,40,heuristic,verified raises legitimacy when bear_launch=1,2,34,1,1.0,1.0,0,0,1,0
+scope,single_pass,41,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,41,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,41,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,42,heuristic,verified raises legitimacy,0,10,1,0.0,1.0,0,1,0,0
+scope,loop,42,heuristic,verified raises legitimacy when bear_launch=1,2,32,1,1.0,1.0,0,0,1,0
+scope,loop_holdout,42,heuristic,verified raises legitimacy when bear_launch=1,2,34,1,1.0,1.0,0,0,1,0
+scope,single_pass,43,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,43,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,43,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,44,heuristic,verified raises legitimacy ; bear_launch raises legitimacy ; wash_share lowers legitimacy,0,10,3,0.0,1.0,1,2,0,1
+scope,loop,44,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1 ; wash_share lowers legitimacy,2,86,3,1.0,1.0,1,0,0,1
+scope,loop_holdout,44,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,91,2,1.0,1.0,0,0,1,0
+scope,single_pass,45,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,45,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,45,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,46,heuristic,verified raises legitimacy ; roadmap_len raises legitimacy,0,10,2,0.0,1.0,1,1,0,1
+scope,loop,46,heuristic,verified raises legitimacy when bear_launch=1 ; roadmap_len raises legitimacy,2,64,2,1.0,1.0,1,0,0,1
+scope,loop_holdout,46,heuristic,verified raises legitimacy when bear_launch=1,2,67,1,1.0,1.0,0,0,1,0
+scope,single_pass,47,heuristic,roadmap_len raises legitimacy,0,10,1,0.0,0.0,1,0,0,1
+scope,loop,47,heuristic,roadmap_len raises legitimacy,1,26,1,0.0,0.0,1,0,0,1
+scope,loop_holdout,47,heuristic,,1,27,0,0.0,0.0,0,0,0,0
+scope,single_pass,48,heuristic,verified raises legitimacy ; bear_launch raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,48,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,48,heuristic,verified raises legitimacy when bear_launch=1 ; bear_launch raises legitimacy when verified=1,2,58,2,1.0,1.0,0,0,1,0
+scope,single_pass,49,heuristic,bear_launch raises legitimacy ; verified raises legitimacy,0,10,2,0.0,1.0,0,2,0,0
+scope,loop,49,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,54,2,1.0,1.0,0,0,1,0
+scope,loop_holdout,49,heuristic,bear_launch raises legitimacy when verified=1 ; verified raises legitimacy when bear_launch=1,2,58,2,1.0,1.0,0,0,1,0
+confound,single_pass,0,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,0,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,0,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,1,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,1,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,1,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,2,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,2,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,2,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,3,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,3,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,3,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,4,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,4,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,4,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,5,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,5,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,5,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,6,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,6,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,6,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,7,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,7,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,7,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,8,heuristic,community raises legitimacy ; verified raises legitimacy ; mint_hour lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,8,heuristic,community raises legitimacy ; mint_hour lowers legitimacy,2,87,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,8,heuristic,community raises legitimacy,2,89,1,1.0,1.0,0,0,1,0
+confound,single_pass,9,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,9,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,9,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,10,heuristic,community raises legitimacy ; verified raises legitimacy ; art_entropy raises legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,10,heuristic,community raises legitimacy ; art_entropy raises legitimacy,2,87,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,10,heuristic,community raises legitimacy,2,89,1,1.0,1.0,0,0,1,0
+confound,single_pass,11,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,11,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,11,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,12,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,12,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,12,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,13,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,13,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,13,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,14,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,14,heuristic,community raises legitimacy ; verified raises legitimacy,1,39,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,14,heuristic,community raises legitimacy ; verified raises legitimacy,1,41,2,1.0,1.0,1,0,0,1
+confound,single_pass,15,heuristic,community raises legitimacy ; verified raises legitimacy ; creator_rep raises legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,15,heuristic,community raises legitimacy ; creator_rep raises legitimacy,2,87,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,15,heuristic,community raises legitimacy,2,89,1,1.0,1.0,0,0,1,0
+confound,single_pass,16,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,16,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,16,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,17,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,17,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,17,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,18,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,18,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,18,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,19,heuristic,community raises legitimacy ; verified raises legitimacy ; creator_rep lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,19,heuristic,community raises legitimacy ; creator_rep lowers legitimacy,2,87,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,19,heuristic,community raises legitimacy,2,89,1,1.0,1.0,0,0,1,0
+confound,single_pass,20,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,20,heuristic,community raises legitimacy ; verified raises legitimacy,1,39,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,20,heuristic,community raises legitimacy ; verified raises legitimacy,1,41,2,1.0,1.0,1,0,0,1
+confound,single_pass,21,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,21,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,21,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,22,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,22,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,22,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,23,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,23,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,23,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,24,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,24,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,24,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,25,heuristic,community raises legitimacy ; verified raises legitimacy ; wash_share raises legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,25,heuristic,community raises legitimacy ; verified raises legitimacy ; wash_share raises legitimacy,1,55,3,1.0,1.0,2,0,0,1
+confound,loop_holdout,25,heuristic,community raises legitimacy ; verified raises legitimacy,1,58,2,1.0,1.0,1,0,0,1
+confound,single_pass,26,heuristic,community raises legitimacy ; verified raises legitimacy ; mint_hour lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,26,heuristic,community raises legitimacy ; mint_hour lowers legitimacy,2,87,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,26,heuristic,community raises legitimacy,2,89,1,1.0,1.0,0,0,1,0
+confound,single_pass,27,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,27,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,27,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,28,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,28,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,28,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,29,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,29,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,29,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,30,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,30,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,30,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,31,heuristic,community raises legitimacy ; verified raises legitimacy ; bear_launch lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,31,heuristic,community raises legitimacy ; bear_launch lowers legitimacy,2,81,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,31,heuristic,community raises legitimacy,2,83,1,1.0,1.0,0,0,1,0
+confound,single_pass,32,heuristic,community raises legitimacy ; verified raises legitimacy ; art_entropy lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,32,heuristic,community raises legitimacy ; art_entropy lowers legitimacy,2,87,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,32,heuristic,community raises legitimacy,2,89,1,1.0,1.0,0,0,1,0
+confound,single_pass,33,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,33,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,33,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,34,heuristic,community raises legitimacy ; verified raises legitimacy ; roadmap_len lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,34,heuristic,community raises legitimacy ; roadmap_len lowers legitimacy,2,87,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,34,heuristic,community raises legitimacy,2,89,1,1.0,1.0,0,0,1,0
+confound,single_pass,35,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,35,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,35,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,36,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,36,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,36,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,37,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,37,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,37,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,38,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,38,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,38,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,39,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,39,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,39,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,40,heuristic,community raises legitimacy ; verified raises legitimacy ; bear_launch lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,40,heuristic,community raises legitimacy ; bear_launch lowers legitimacy,2,81,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,40,heuristic,community raises legitimacy,2,83,1,1.0,1.0,0,0,1,0
+confound,single_pass,41,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,41,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,41,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,42,heuristic,community raises legitimacy ; verified raises legitimacy ; bear_launch lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,42,heuristic,community raises legitimacy ; bear_launch lowers legitimacy,2,81,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,42,heuristic,community raises legitimacy ; bear_launch lowers legitimacy,2,83,2,1.0,1.0,1,0,0,1
+confound,single_pass,43,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,43,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,43,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,44,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,44,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,44,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,45,heuristic,community raises legitimacy ; verified raises legitimacy ; roadmap_len lowers legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,45,heuristic,community raises legitimacy ; verified raises legitimacy ; roadmap_len lowers legitimacy,1,55,3,1.0,1.0,2,0,0,1
+confound,loop_holdout,45,heuristic,community raises legitimacy ; verified raises legitimacy,1,58,2,1.0,1.0,1,0,0,1
+confound,single_pass,46,heuristic,community raises legitimacy ; verified raises legitimacy ; roadmap_len raises legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,46,heuristic,community raises legitimacy ; roadmap_len raises legitimacy,2,87,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,46,heuristic,community raises legitimacy,2,89,1,1.0,1.0,0,0,1,0
+confound,single_pass,47,heuristic,community raises legitimacy ; verified raises legitimacy ; roadmap_len raises legitimacy,0,10,3,1.0,1.0,2,0,0,1
+confound,loop,47,heuristic,community raises legitimacy ; roadmap_len raises legitimacy,2,87,2,1.0,1.0,1,0,0,1
+confound,loop_holdout,47,heuristic,community raises legitimacy,2,89,1,1.0,1.0,0,0,1,0
+confound,single_pass,48,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,48,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,48,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+confound,single_pass,49,heuristic,community raises legitimacy ; verified raises legitimacy,0,10,2,1.0,1.0,1,0,0,1
+confound,loop,49,heuristic,community raises legitimacy,2,55,1,1.0,1.0,0,0,1,0
+confound,loop_holdout,49,heuristic,community raises legitimacy,2,56,1,1.0,1.0,0,0,1,0
+null,single_pass,0,heuristic,verified lowers legitimacy,0,10,1,,,1,0,0,1
+null,loop,0,heuristic,verified lowers legitimacy,1,23,1,,,1,0,0,1
+null,loop_holdout,0,heuristic,,1,24,0,,,0,0,1,0
+null,single_pass,1,heuristic,,0,10,0,,,0,0,1,0
+null,loop,1,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,1,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,2,heuristic,verified raises legitimacy,0,10,1,,,1,0,0,1
+null,loop,2,heuristic,verified raises legitimacy,1,23,1,,,1,0,0,1
+null,loop_holdout,2,heuristic,,1,24,0,,,0,0,1,0
+null,single_pass,3,heuristic,,0,10,0,,,0,0,1,0
+null,loop,3,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,3,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,4,heuristic,royalty lowers legitimacy,0,10,1,,,1,0,0,1
+null,loop,4,heuristic,royalty lowers legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,4,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,5,heuristic,roadmap_len lowers legitimacy ; community lowers legitimacy,0,10,2,,,2,0,0,1
+null,loop,5,heuristic,roadmap_len lowers legitimacy ; community lowers legitimacy,1,42,2,,,2,0,0,1
+null,loop_holdout,5,heuristic,,1,44,0,,,0,0,1,0
+null,single_pass,6,heuristic,,0,10,0,,,0,0,1,0
+null,loop,6,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,6,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,7,heuristic,,0,10,0,,,0,0,1,0
+null,loop,7,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,7,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,8,heuristic,mint_hour lowers legitimacy,0,10,1,,,1,0,0,1
+null,loop,8,heuristic,mint_hour lowers legitimacy when verified=1,2,35,1,,,1,0,0,1
+null,loop_holdout,8,heuristic,,2,36,0,,,0,0,1,0
+null,single_pass,9,heuristic,,0,10,0,,,0,0,1,0
+null,loop,9,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,9,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,10,heuristic,,0,10,0,,,0,0,1,0
+null,loop,10,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,10,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,11,heuristic,,0,10,0,,,0,0,1,0
+null,loop,11,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,11,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,12,heuristic,,0,10,0,,,0,0,1,0
+null,loop,12,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,12,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,13,heuristic,creator_rep raises legitimacy,0,10,1,,,1,0,0,1
+null,loop,13,heuristic,creator_rep raises legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,13,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,14,heuristic,,0,10,0,,,0,0,1,0
+null,loop,14,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,14,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,15,heuristic,creator_rep raises legitimacy,0,10,1,,,1,0,0,1
+null,loop,15,heuristic,creator_rep raises legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,15,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,16,heuristic,,0,10,0,,,0,0,1,0
+null,loop,16,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,16,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,17,heuristic,supply_log lowers legitimacy,0,10,1,,,1,0,0,1
+null,loop,17,heuristic,supply_log lowers legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,17,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,18,heuristic,community lowers legitimacy,0,10,1,,,1,0,0,1
+null,loop,18,heuristic,community lowers legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,18,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,19,heuristic,verified raises legitimacy ; creator_rep lowers legitimacy,0,10,2,,,2,0,0,1
+null,loop,19,heuristic,verified raises legitimacy ; creator_rep lowers legitimacy,1,39,2,,,2,0,0,1
+null,loop_holdout,19,heuristic,,1,41,0,,,0,0,1,0
+null,single_pass,20,heuristic,,0,10,0,,,0,0,1,0
+null,loop,20,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,20,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,21,heuristic,royalty raises legitimacy,0,10,1,,,1,0,0,1
+null,loop,21,heuristic,royalty raises legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,21,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,22,heuristic,,0,10,0,,,0,0,1,0
+null,loop,22,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,22,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,23,heuristic,,0,10,0,,,0,0,1,0
+null,loop,23,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,23,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,24,heuristic,,0,10,0,,,0,0,1,0
+null,loop,24,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,24,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,25,heuristic,wash_share raises legitimacy,0,10,1,,,1,0,0,1
+null,loop,25,heuristic,wash_share raises legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,25,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,26,heuristic,,0,10,0,,,0,0,1,0
+null,loop,26,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,26,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,27,heuristic,,0,10,0,,,0,0,1,0
+null,loop,27,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,27,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,28,heuristic,,0,10,0,,,0,0,1,0
+null,loop,28,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,28,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,29,heuristic,,0,10,0,,,0,0,1,0
+null,loop,29,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,29,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,30,heuristic,,0,10,0,,,0,0,1,0
+null,loop,30,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,30,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,31,heuristic,bear_launch lowers legitimacy,0,10,1,,,1,0,0,1
+null,loop,31,heuristic,bear_launch lowers legitimacy,1,23,1,,,1,0,0,1
+null,loop_holdout,31,heuristic,,1,24,0,,,0,0,1,0
+null,single_pass,32,heuristic,wash_share lowers legitimacy ; mint_hour raises legitimacy,0,10,2,,,2,0,0,1
+null,loop,32,heuristic,wash_share lowers legitimacy ; mint_hour raises legitimacy,1,42,2,,,2,0,0,1
+null,loop_holdout,32,heuristic,,1,44,0,,,0,0,1,0
+null,single_pass,33,heuristic,,0,10,0,,,0,0,1,0
+null,loop,33,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,33,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,34,heuristic,roadmap_len lowers legitimacy ; bear_launch lowers legitimacy,0,10,2,,,2,0,0,1
+null,loop,34,heuristic,roadmap_len lowers legitimacy ; bear_launch lowers legitimacy,1,39,2,,,2,0,0,1
+null,loop_holdout,34,heuristic,,1,41,0,,,0,0,1,0
+null,single_pass,35,heuristic,,0,10,0,,,0,0,1,0
+null,loop,35,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,35,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,36,heuristic,,0,10,0,,,0,0,1,0
+null,loop,36,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,36,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,37,heuristic,roadmap_len raises legitimacy,0,10,1,,,1,0,0,1
+null,loop,37,heuristic,roadmap_len raises legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,37,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,38,heuristic,verified raises legitimacy,0,10,1,,,1,0,0,1
+null,loop,38,heuristic,verified raises legitimacy,1,23,1,,,1,0,0,1
+null,loop_holdout,38,heuristic,,1,24,0,,,0,0,1,0
+null,single_pass,39,heuristic,,0,10,0,,,0,0,1,0
+null,loop,39,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,39,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,40,heuristic,bear_launch lowers legitimacy,0,10,1,,,1,0,0,1
+null,loop,40,heuristic,bear_launch lowers legitimacy,1,23,1,,,1,0,0,1
+null,loop_holdout,40,heuristic,,1,24,0,,,0,0,1,0
+null,single_pass,41,heuristic,,0,10,0,,,0,0,1,0
+null,loop,41,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,41,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,42,heuristic,bear_launch lowers legitimacy,0,10,1,,,1,0,0,1
+null,loop,42,heuristic,bear_launch lowers legitimacy,1,23,1,,,1,0,0,1
+null,loop_holdout,42,heuristic,,1,24,0,,,0,0,1,0
+null,single_pass,43,heuristic,community lowers legitimacy,0,10,1,,,1,0,0,1
+null,loop,43,heuristic,community lowers legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,43,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,44,heuristic,wash_share lowers legitimacy,0,10,1,,,1,0,0,1
+null,loop,44,heuristic,wash_share lowers legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,44,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,45,heuristic,,0,10,0,,,0,0,1,0
+null,loop,45,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,45,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,46,heuristic,roadmap_len raises legitimacy,0,10,1,,,1,0,0,1
+null,loop,46,heuristic,roadmap_len raises legitimacy,1,26,1,,,1,0,0,1
+null,loop_holdout,46,heuristic,,1,27,0,,,0,0,1,0
+null,single_pass,47,heuristic,roadmap_len raises legitimacy ; verified lowers legitimacy,0,10,2,,,2,0,0,1
+null,loop,47,heuristic,roadmap_len raises legitimacy ; verified lowers legitimacy,1,39,2,,,2,0,0,1
+null,loop_holdout,47,heuristic,,1,41,0,,,0,0,1,0
+null,single_pass,48,heuristic,,0,10,0,,,0,0,1,0
+null,loop,48,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,48,heuristic,,1,10,0,,,0,0,1,0
+null,single_pass,49,heuristic,,0,10,0,,,0,0,1,0
+null,loop,49,heuristic,,1,10,0,,,0,0,1,0
+null,loop_holdout,49,heuristic,,1,10,0,,,0,0,1,0
+multi,single_pass,0,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,0,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy when bear_launch=1,2,67,2,0.5,1.0,0,1,0,0
+multi,loop_holdout,0,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy when bear_launch=1,2,70,2,0.5,1.0,0,1,0,0
+multi,single_pass,1,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,1,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,1,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,2,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; verified raises legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,2,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; verified raises legitimacy,1,55,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,2,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,58,2,1.0,1.0,0,0,1,0
+multi,single_pass,3,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,3,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,3,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,4,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; royalty lowers legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,4,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; royalty lowers legitimacy,1,58,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,4,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,61,2,1.0,1.0,0,0,1,0
+multi,single_pass,5,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; roadmap_len lowers legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,5,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; roadmap_len lowers legitimacy,1,58,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,5,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,61,2,1.0,1.0,0,0,1,0
+multi,single_pass,6,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,6,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,6,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,7,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,7,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,7,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,8,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,8,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,8,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,9,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,9,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,9,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,10,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,10,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,10,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,11,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; verified raises legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,11,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; verified raises legitimacy,1,55,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,11,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,58,2,1.0,1.0,0,0,1,0
+multi,single_pass,12,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,12,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,12,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,13,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,13,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,13,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,14,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,14,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,14,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,15,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,15,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,15,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,16,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,16,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,16,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,17,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; bear_launch raises legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,17,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; bear_launch raises legitimacy,1,55,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,17,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,58,2,1.0,1.0,0,0,1,0
+multi,single_pass,18,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,18,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,18,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,19,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; verified raises legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,19,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; verified raises legitimacy,1,55,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,19,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,58,2,1.0,1.0,0,0,1,0
+multi,single_pass,20,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,20,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,20,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,21,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; royalty raises legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,21,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; royalty raises legitimacy,1,58,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,21,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,61,2,1.0,1.0,0,0,1,0
+multi,single_pass,22,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,22,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,22,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,23,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,23,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,23,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,24,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; royalty raises legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,24,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; royalty raises legitimacy,1,58,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,24,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,61,2,1.0,1.0,0,0,1,0
+multi,single_pass,25,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,25,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,25,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,26,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,26,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,26,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,27,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,27,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,27,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,28,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,28,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,28,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,29,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,29,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,29,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,30,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,30,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,30,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,31,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; bear_launch lowers legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,31,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; bear_launch lowers legitimacy,1,55,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,31,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,58,2,1.0,1.0,0,0,1,0
+multi,single_pass,32,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; art_entropy lowers legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,32,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; art_entropy lowers legitimacy,1,58,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,32,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,61,2,1.0,1.0,0,0,1,0
+multi,single_pass,33,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,33,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,33,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,34,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; roadmap_len lowers legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,34,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy ; roadmap_len lowers legitimacy,1,58,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,34,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,61,2,1.0,1.0,0,0,1,0
+multi,single_pass,35,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,35,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,35,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,36,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,36,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,36,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,37,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,37,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,37,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,38,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; verified raises legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,38,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; verified raises legitimacy,1,55,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,38,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,58,2,1.0,1.0,0,0,1,0
+multi,single_pass,39,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,39,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,39,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,40,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; bear_launch lowers legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,40,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; bear_launch lowers legitimacy,1,55,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,40,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,58,2,1.0,1.0,0,0,1,0
+multi,single_pass,41,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,41,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,41,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,42,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; bear_launch lowers legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,42,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; bear_launch lowers legitimacy,1,55,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,42,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,58,2,1.0,1.0,0,0,1,0
+multi,single_pass,43,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; community lowers legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,43,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; community lowers legitimacy,1,58,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,43,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,61,2,1.0,1.0,0,0,1,0
+multi,single_pass,44,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,44,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,44,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,45,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; royalty raises legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,45,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; royalty raises legitimacy,1,58,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,45,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,61,2,1.0,1.0,0,0,1,0
+multi,single_pass,46,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; roadmap_len raises legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,46,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; roadmap_len raises legitimacy,1,58,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,46,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,61,2,1.0,1.0,0,0,1,0
+multi,single_pass,47,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; roadmap_len raises legitimacy,0,10,3,1.0,1.0,1,0,0,1
+multi,loop,47,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy ; roadmap_len raises legitimacy,1,58,3,1.0,1.0,1,0,0,1
+multi,loop_holdout,47,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,61,2,1.0,1.0,0,0,1,0
+multi,single_pass,48,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,48,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,48,heuristic,wash_share lowers legitimacy ; creator_rep raises legitimacy,1,44,2,1.0,1.0,0,0,1,0
+multi,single_pass,49,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,0,10,2,1.0,1.0,0,0,1,0
+multi,loop,49,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,42,2,1.0,1.0,0,0,1,0
+multi,loop_holdout,49,heuristic,creator_rep raises legitimacy ; wash_share lowers legitimacy,1,44,2,1.0,1.0,0,0,1,0
