@@ -5,6 +5,9 @@ import (
 	"math/rand/v2"
 )
 
+// this stats toolkit is hand-written to minimize dependencies 
+// it is not intended to be a general-purpose statistics package.
+
 // rng draws every random number in the benchmark. PCG is a fixed, published
 // algorithm, and the transforms below are written out here rather than taken
 // from the standard library, so a seed means the same data on any Go version.
