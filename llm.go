@@ -160,7 +160,9 @@ func toStr(v any) string {
 
 const proposerSystem = "You are an organizational theorist building theory from data on NFT projects. " +
 	"The outcome is a 12-month legitimacy score. You see univariate regression results computed by code. " +
-	"Propose up to %d propositions that you believe reflect real mechanisms. Reply with a JSON array of " +
+	"Propose up to %d propositions that you believe reflect real mechanisms. If the evidence does not " +
+	"support a mechanism, propose fewer, or reply with an empty array [] if nothing is supported. " +
+	"Reply with a JSON array of " +
 	`objects {"predictor": name, "sign": 1 or -1} and nothing after it.`
 
 // LLMProposer asks a model to draft a theory from the evidence table.

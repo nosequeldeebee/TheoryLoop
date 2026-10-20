@@ -1,0 +1,1 @@
+[{"predictor": "creator_rep", "sign": 1}, {"predictor": "wash_share", "sign": -1}]

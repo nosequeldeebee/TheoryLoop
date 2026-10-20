@@ -1,0 +1,11 @@
+{"step":0,"agent":"proposer","action":"test","spec":"legitimacy ~ verified","coef":0.1627112725894128,"p":0.000001119141327214425}
+{"step":1,"agent":"proposer","action":"test","spec":"legitimacy ~ creator_rep","coef":0.014492310551321053,"p":0.6663484846654345}
+{"step":2,"agent":"proposer","action":"test","spec":"legitimacy ~ community","coef":0.3619191235548177,"p":1.236250314030536e-28}
+{"step":3,"agent":"proposer","action":"test","spec":"legitimacy ~ royalty","coef":-0.03164509379249608,"p":0.34637307607299495}
+{"step":4,"agent":"proposer","action":"test","spec":"legitimacy ~ wash_share","coef":-0.05445798712190089,"p":0.10497752195118248}
+{"step":5,"agent":"proposer","action":"test","spec":"legitimacy ~ bear_launch","coef":-0.04378061452282375,"p":0.19256682521980895}
+{"step":6,"agent":"proposer","action":"test","spec":"legitimacy ~ roadmap_len","coef":-0.007530278806648602,"p":0.8227356231300126}
+{"step":7,"agent":"proposer","action":"test","spec":"legitimacy ~ art_entropy","coef":0.01733493958787632,"p":0.6060310475365479}
+{"step":8,"agent":"proposer","action":"test","spec":"legitimacy ~ mint_hour","coef":0.02767892425007166,"p":0.4101752662979167}
+{"step":9,"agent":"proposer","action":"test","spec":"legitimacy ~ supply_log","coef":-0.04070085769216184,"p":0.22578359584346352}
+{"step":10,"agent":"proposer","action":"propose","theory":["community raises legitimacy","verified raises legitimacy"],"raw":"[{\"predictor\": \"community\", \"sign\": 1}, {\"predictor\": \"verified\", \"sign\": 1}]"}

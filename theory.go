@@ -2,7 +2,7 @@ package theoryloop
 
 import "fmt"
 
-// Theory as code. A theory is a list of propositions, and each proposition is
+// Theory as code. Each proposition is
 // an executable claim:
 //
 //	"Among cases satisfying Cond, higher Predictor goes with higher (Sign=+1)
