@@ -1,0 +1,47 @@
+[
+  {
+    "world": "main",
+    "description": "Verification raises legitimacy everywhere.",
+    "mechanisms": [
+      [
+        "verified raises legitimacy"
+      ]
+    ]
+  },
+  {
+    "world": "scope",
+    "description": "Verification matters only for projects launched in a bear market.",
+    "mechanisms": [
+      [
+        "verified raises legitimacy when bear_launch=1",
+        "bear_launch raises legitimacy when verified=1"
+      ]
+    ]
+  },
+  {
+    "world": "confound",
+    "description": "Community drives both verification and legitimacy; verification is a decoy.",
+    "mechanisms": [
+      [
+        "community raises legitimacy"
+      ]
+    ]
+  },
+  {
+    "world": "null",
+    "description": "No mechanism. Any proposition is a false discovery.",
+    "mechanisms": []
+  },
+  {
+    "world": "multi",
+    "description": "Heavy wash trading destroys legitimacy (threshold); creator reputation helps.",
+    "mechanisms": [
+      [
+        "wash_share lowers legitimacy"
+      ],
+      [
+        "creator_rep raises legitimacy"
+      ]
+    ]
+  }
+]

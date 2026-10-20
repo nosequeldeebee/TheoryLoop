@@ -1,74 +1,46 @@
-{"step": 0, "agent": "proposer", "action": "test", "spec": "legitimacy ~ verified", "coef": -0.06317381881282746, "p": 0.05111339787577841}
-{"step": 1, "agent": "proposer", "action": "test", "spec": "legitimacy ~ creator_rep", "coef": 0.18352454281425687, "p": 1.1477996818924598e-08}
-{"step": 2, "agent": "proposer", "action": "test", "spec": "legitimacy ~ community", "coef": -0.019011958472090765, "p": 0.5575422872611329}
-{"step": 3, "agent": "proposer", "action": "test", "spec": "legitimacy ~ royalty", "coef": -0.02417342648113719, "p": 0.45581201400276206}
-{"step": 4, "agent": "proposer", "action": "test", "spec": "legitimacy ~ wash_share", "coef": -0.13650802999655615, "p": 2.3406565589286708e-05}
-{"step": 5, "agent": "proposer", "action": "test", "spec": "legitimacy ~ bear_launch", "coef": -0.01130967519720478, "p": 0.727186625796203}
-{"step": 6, "agent": "proposer", "action": "test", "spec": "legitimacy ~ roadmap_len", "coef": 0.003144032659248016, "p": 0.922741105897966}
-{"step": 7, "agent": "proposer", "action": "test", "spec": "legitimacy ~ art_entropy", "coef": -0.025816734569625115, "p": 0.42575714718621926}
-{"step": 8, "agent": "proposer", "action": "test", "spec": "legitimacy ~ mint_hour", "coef": 0.009450438156737125, "p": 0.7706569595965505}
-{"step": 9, "agent": "proposer", "action": "test", "spec": "legitimacy ~ supply_log", "coef": -0.010632401176277012, "p": 0.7429288316332094}
-{"step": 10, "agent": "proposer", "action": "propose", "theory": ["creator_rep raises legitimacy", "wash_share lowers legitimacy"]}
-{"step": 11, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy", "coef": 0.18352454281425687, "p": 1.1477996818924598e-08}
-{"step": 12, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control verified", "coef": 0.18298729570361064, "p": 1.2101981994479693e-08}
-{"step": 13, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy x verified", "coef": 0.05273432291645962, "p": 0.4156400322645884}
-{"step": 14, "agent": "falsifier", "action": "test", "spec": "creator_rep when verified=0", "coef": 0.16074336756424926, "p": 0.00010193992244550986}
-{"step": 15, "agent": "falsifier", "action": "test", "spec": "creator_rep when verified=1", "coef": 0.21555965111905473, "p": 2.424871819879999e-05}
-{"step": 16, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control community", "coef": 0.18323111814870116, "p": 1.2327109484377219e-08}
-{"step": 17, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control royalty", "coef": 0.1836675826585778, "p": 1.1265382653944421e-08}
-{"step": 18, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control wash_share", "coef": 0.18457642036871544, "p": 7.035757948001552e-09}
-{"step": 19, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control bear_launch", "coef": 0.18428432534200756, "p": 1.0402504770124463e-08}
-{"step": 20, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy x bear_launch", "coef": 0.03903974010399944, "p": 0.5412088618717571}
-{"step": 21, "agent": "falsifier", "action": "test", "spec": "creator_rep when bear_launch=0", "coef": 0.16653818081255642, "p": 0.00024049776632128223}
-{"step": 22, "agent": "falsifier", "action": "test", "spec": "creator_rep when bear_launch=1", "coef": 0.20092937319161744, "p": 1.0678652749284985e-05}
-{"step": 23, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control roadmap_len", "coef": 0.18354457835979512, "p": 1.1724169479830915e-08}
-{"step": 24, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control art_entropy", "coef": 0.18292780843204592, "p": 1.3083188895328815e-08}
-{"step": 25, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control mint_hour", "coef": 0.18395725308351846, "p": 1.0913498419778853e-08}
-{"step": 26, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control supply_log", "coef": 0.18397564877222286, "p": 1.0863917594978925e-08}
-{"step": 27, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy", "coef": -0.13650802999655615, "p": 2.3406565589286708e-05}
-{"step": 28, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy | control verified", "coef": -0.14377778679262893, "p": 8.863276365547927e-06}
-{"step": 29, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy x verified", "coef": 0.029779370020946334, "p": 0.6662751821499368}
-{"step": 30, "agent": "falsifier", "action": "test", "spec": "wash_share when verified=0", "coef": -0.16320193294909713, "p": 7.941966653750206e-05}
-{"step": 31, "agent": "falsifier", "action": "test", "spec": "wash_share when verified=1", "coef": -0.10941160310057423, "p": 0.03356660705056437}
-{"step": 32, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy | control creator_rep", "coef": -0.1379157861288871, "p": 1.4095544483759155e-05}
-{"step": 33, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy | control community", "coef": -0.1365697646235322, "p": 2.3352227299192556e-05}
-{"step": 34, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy | control royalty", "coef": -0.13593649100293065, "p": 2.563104629744387e-05}
-{"step": 35, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy | control bear_launch", "coef": -0.13627622764395395, "p": 2.4865730069635704e-05}
-{"step": 36, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy x bear_launch", "coef": -0.1793659406671616, "p": 0.005519006581698203}
-{"step": 37, "agent": "falsifier", "action": "test", "spec": "wash_share when bear_launch=0", "coef": -0.03575010075042662, "p": 0.4336286855681614}
-{"step": 38, "agent": "falsifier", "action": "test", "spec": "wash_share when bear_launch=1", "coef": -0.22287144775436432, "p": 9.85713562343206e-07}
-{"step": 39, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy | control roadmap_len", "coef": -0.1365259562967289, "p": 2.3572349777950416e-05}
-{"step": 40, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy | control art_entropy", "coef": -0.1365578611614242, "p": 2.3324941953997745e-05}
-{"step": 41, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy | control mint_hour", "coef": -0.13651143571608543, "p": 2.3597992849084662e-05}
-{"step": 42, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy | control supply_log", "coef": -0.13630894706965332, "p": 2.4772300334473856e-05}
-{"step": 43, "agent": "falsifier", "action": "critique", "objections": ["scope: wash_share lowers legitimacy -> bear_launch=1"]}
-{"step": 44, "agent": "reviser", "action": "revise", "theory": ["creator_rep raises legitimacy", "wash_share lowers legitimacy when bear_launch=1"]}
-{"step": 45, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy", "coef": 0.18352454281425687, "p": 1.1477996818924598e-08}
-{"step": 46, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control verified", "coef": 0.18298729570361064, "p": 1.2101981994479693e-08}
-{"step": 47, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy x verified", "coef": 0.05273432291645962, "p": 0.4156400322645884}
-{"step": 48, "agent": "falsifier", "action": "test", "spec": "creator_rep when verified=0", "coef": 0.16074336756424926, "p": 0.00010193992244550986}
-{"step": 49, "agent": "falsifier", "action": "test", "spec": "creator_rep when verified=1", "coef": 0.21555965111905473, "p": 2.424871819879999e-05}
-{"step": 50, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control community", "coef": 0.18323111814870116, "p": 1.2327109484377219e-08}
-{"step": 51, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control royalty", "coef": 0.1836675826585778, "p": 1.1265382653944421e-08}
-{"step": 52, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control wash_share", "coef": 0.18457642036871544, "p": 7.035757948001552e-09}
-{"step": 53, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control bear_launch", "coef": 0.18428432534200756, "p": 1.0402504770124463e-08}
-{"step": 54, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy x bear_launch", "coef": 0.03903974010399944, "p": 0.5412088618717571}
-{"step": 55, "agent": "falsifier", "action": "test", "spec": "creator_rep when bear_launch=0", "coef": 0.16653818081255642, "p": 0.00024049776632128223}
-{"step": 56, "agent": "falsifier", "action": "test", "spec": "creator_rep when bear_launch=1", "coef": 0.20092937319161744, "p": 1.0678652749284985e-05}
-{"step": 57, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control roadmap_len", "coef": 0.18354457835979512, "p": 1.1724169479830915e-08}
-{"step": 58, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control art_entropy", "coef": 0.18292780843204592, "p": 1.3083188895328815e-08}
-{"step": 59, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control mint_hour", "coef": 0.18395725308351846, "p": 1.0913498419778853e-08}
-{"step": 60, "agent": "falsifier", "action": "test", "spec": "creator_rep raises legitimacy | control supply_log", "coef": 0.18397564877222286, "p": 1.0863917594978925e-08}
-{"step": 61, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy when bear_launch=1", "coef": -0.22287144775436432, "p": 9.85713562343206e-07}
-{"step": 62, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy when bear_launch=1 | control verified", "coef": -0.22606114254755225, "p": 8.70394565700476e-07}
-{"step": 63, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy when bear_launch=1 | control creator_rep", "coef": -0.22396363877485043, "p": 5.46575774920772e-07}
-{"step": 64, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy when bear_launch=1 | control community", "coef": -0.22422721009739932, "p": 8.466183196562346e-07}
-{"step": 65, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy when bear_launch=1 | control royalty", "coef": -0.22240597161443262, "p": 1.0678615029732458e-06}
-{"step": 66, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy when bear_launch=1 | control roadmap_len", "coef": -0.22270218519188267, "p": 1.0213084200158163e-06}
-{"step": 67, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy when bear_launch=1 | control art_entropy", "coef": -0.22260901443251158, "p": 1.046137244252236e-06}
-{"step": 68, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy when bear_launch=1 | control mint_hour", "coef": -0.22143054475239887, "p": 1.152651572462286e-06}
-{"step": 69, "agent": "falsifier", "action": "test", "spec": "wash_share lowers legitimacy when bear_launch=1 | control supply_log", "coef": -0.22326813720456082, "p": 9.520410333975719e-07}
-{"step": 70, "agent": "falsifier", "action": "critique", "objections": []}
-{"step": 71, "agent": "holdout", "action": "test", "spec": "creator_rep raises legitimacy", "coef": 0.2460091361325484, "p": 5.820128001559764e-14, "set": "holdout"}
-{"step": 72, "agent": "holdout", "action": "test", "spec": "wash_share lowers legitimacy when bear_launch=1", "coef": -0.2559336448424077, "p": 5.388977368227307e-08, "set": "holdout"}
-{"step": 73, "agent": "holdout", "action": "test", "spec": "scope of wash_share lowers legitimacy when bear_launch=1", "p": 0.022411496771954448, "set": "holdout"}
+{"step":0,"agent":"proposer","action":"test","spec":"legitimacy ~ verified","coef":-0.019732029623135625,"p":0.550914376010517}
+{"step":1,"agent":"proposer","action":"test","spec":"legitimacy ~ creator_rep","coef":0.21184112865962065,"p":9.832837039342057e-11}
+{"step":2,"agent":"proposer","action":"test","spec":"legitimacy ~ community","coef":0.01774824913849878,"p":0.5916664953613668}
+{"step":3,"agent":"proposer","action":"test","spec":"legitimacy ~ royalty","coef":-0.0129299128745608,"p":0.6959597632804516}
+{"step":4,"agent":"proposer","action":"test","spec":"legitimacy ~ wash_share","coef":-0.21600047960304722,"p":4.13079800285159e-11}
+{"step":5,"agent":"proposer","action":"test","spec":"legitimacy ~ bear_launch","coef":0.029899579586869826,"p":0.3660993537790298}
+{"step":6,"agent":"proposer","action":"test","spec":"legitimacy ~ roadmap_len","coef":-0.003972496187820121,"p":0.9044384717004494}
+{"step":7,"agent":"proposer","action":"test","spec":"legitimacy ~ art_entropy","coef":-0.0071410131157745955,"p":0.8291305896307217}
+{"step":8,"agent":"proposer","action":"test","spec":"legitimacy ~ mint_hour","coef":0.014567441089646305,"p":0.6597375069411888}
+{"step":9,"agent":"proposer","action":"test","spec":"legitimacy ~ supply_log","coef":0.013346719930308892,"p":0.6866699617918481}
+{"step":10,"agent":"proposer","action":"propose","theory":["wash_share lowers legitimacy","creator_rep raises legitimacy"]}
+{"step":11,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy","coef":-0.21600047960304722,"p":4.13079800285159e-11}
+{"step":12,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy | control verified","coef":-0.2159925073336244,"p":4.196951429154703e-11}
+{"step":13,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy x verified","coef":-0.00020147905584178005,"p":0.9975483671854406}
+{"step":14,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy when verified=0","coef":-0.21420573252772682,"p":3.589540900211851e-7}
+{"step":15,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy when verified=1","coef":-0.21875675909769782,"p":0.000027490858476852254}
+{"step":16,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy | control creator_rep","coef":-0.21651488353556275,"p":1.4239742912830577e-11}
+{"step":17,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy | control community","coef":-0.21578334073299293,"p":4.414862201324477e-11}
+{"step":18,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy | control royalty","coef":-0.21580707149613704,"p":4.467694534625038e-11}
+{"step":19,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy | control bear_launch","coef":-0.21655085214796851,"p":3.7146616735882905e-11}
+{"step":20,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy x bear_launch","coef":-0.050214897739639275,"p":0.44109742898271764}
+{"step":21,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy when bear_launch=0","coef":-0.17858214083924068,"p":0.00014783388385478647}
+{"step":22,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy when bear_launch=1","coef":-0.25092317949393883,"p":3.813807492525416e-8}
+{"step":23,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy | control roadmap_len","coef":-0.21599294167306943,"p":4.254744288401623e-11}
+{"step":24,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy | control art_entropy","coef":-0.21613910840994596,"p":4.1157487824563374e-11}
+{"step":25,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy | control mint_hour","coef":-0.21576511919175595,"p":4.4912417036313025e-11}
+{"step":26,"agent":"falsifier","action":"test","spec":"wash_share lowers legitimacy | control supply_log","coef":-0.21580835096855888,"p":4.433930087921058e-11}
+{"step":27,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy","coef":0.21184112865962065,"p":9.832837039342057e-11}
+{"step":28,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy | control verified","coef":0.21233189795303625,"p":9.090032495251864e-11}
+{"step":29,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy x verified","coef":0.03560788021902789,"p":0.5905167554560795}
+{"step":30,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy when verified=0","coef":0.20030789794207948,"p":0.0000020081228596163366}
+{"step":31,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy when verified=1","coef":0.23002780601203932,"p":0.00001012759387247761}
+{"step":32,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy | control community","coef":0.21161681820553757,"p":1.05103994759404e-10}
+{"step":33,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy | control royalty","coef":0.21164517901360352,"p":1.067937838345507e-10}
+{"step":34,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy | control wash_share","coef":0.2123655832620475,"p":3.383759960497503e-11}
+{"step":35,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy | control bear_launch","coef":0.21224609499408656,"p":9.106970559712442e-11}
+{"step":36,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy x bear_launch","coef":0.029394431794287246,"p":0.6504967972169307}
+{"step":37,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy when bear_launch=0","coef":0.19437537878521932,"p":0.00003535562398675442}
+{"step":38,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy when bear_launch=1","coef":0.22957255792432685,"p":5.199633883936441e-7}
+{"step":39,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy | control roadmap_len","coef":0.2118273890397489,"p":1.0076050980854604e-10}
+{"step":40,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy | control art_entropy","coef":0.21250211926169352,"p":9.092094389735342e-11}
+{"step":41,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy | control mint_hour","coef":0.2117034761542708,"p":1.0320275431329208e-10}
+{"step":42,"agent":"falsifier","action":"test","spec":"creator_rep raises legitimacy | control supply_log","coef":0.21201340771075528,"p":1.0888410886680344e-10}
+{"step":43,"agent":"falsifier","action":"critique","objections":[]}
+{"step":44,"agent":"holdout","action":"test","spec":"wash_share lowers legitimacy","coef":-0.1846223709986863,"p":1.4232332638474468e-8,"set":"holdout"}
+{"step":45,"agent":"holdout","action":"test","spec":"creator_rep raises legitimacy","coef":0.20108824485038798,"p":6.182105382876639e-10,"set":"holdout"}

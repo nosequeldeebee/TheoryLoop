@@ -22,18 +22,33 @@ nonsense. `theoryloop` supplies the missing pieces:
 
 ## Quick start
 
+Requires Go 1.24 or later. No third-party packages.
+
 ```bash
-python -m unittest discover tests          # 10 tests, no API key needed
-python run_benchmark.py                    # reference agents, 5 worlds x 50 seeds x 3 conditions (~45s)
+go test ./...                                   # 15 tests, no API key needed
+go run ./cmd/theoryloop bench                   # reference agents: 5 worlds x 500 seeds x 3 conditions (~10 s)
+go run ./cmd/theoryloop export                  # write the generated datasets to data/ as CSV
+
 export ANTHROPIC_API_KEY=...
-python run_benchmark.py --backend llm --seeds 10              # Claude subagents
-python run_benchmark.py --backend llm --seeds 10 --anonymize  # same, variable names hidden
+go run ./cmd/theoryloop bench -backend llm -seeds 10              # Claude subagents
+go run ./cmd/theoryloop bench -backend llm -seeds 10 -anonymize   # same, variable names hidden
 ```
 
-Requires Python 3.10+, numpy, pandas, scipy, matplotlib, tabulate. The LLM
-backend calls the Claude Messages API over HTTPS with the standard library.
+Or build a single binary with `go build -o theoryloop ./cmd/theoryloop`.
 
-## Worlds
+Useful `bench` flags: `-worlds confound,null` to run a subset, `-model` to choose
+the model, `-workers` for parallel runs (default 4 for the LLM backend, which
+retries rate-limit errors with backoff). A run whose model call fails is
+recorded with its error and excluded from the summary, rather than stopping the
+benchmark.
+
+## The data
+
+There are no input files: each world is generated from its seed by `MakeWorld`
+in `worlds.go`, so the benchmark needs nothing but the code. `data/` holds the
+first three seeds of every world, exported with `theoryloop export`, so the data
+can be inspected in R, Stata or Python without running Go. Each CSV marks every
+row as `discovery` or `holdout`; `data/truth.json` lists the planted mechanisms.
 
 | world | planted mechanism | failure mode it probes |
 |---|---|---|
@@ -49,30 +64,34 @@ backend calls the Claude Messages API over HTTPS with the standard library.
 - `loop`: proposer → falsifier → reviser, repeated until no objections
 - `loop_holdout`: loop, then every surviving claim (including each scope condition) must hold on held-out cases
 
-## First results (reference agents, 50 seeds per world)
+## Results so far (reference agents, 500 seeds per world)
 
 | condition | recovered planted theory exactly | asserted a non-existent mechanism |
 |---|---|---|
-| single pass | 36% | 50% |
+| single pass | 37% | 50% |
 | adversarial loop | 60% | 37% |
-| loop + holdout gate | 92% | 2% |
+| loop + holdout gate | 93% | 3% |
 
-Full tables: `results/heuristic_summary.md`. Per-step ledgers for the first three
-seeds of each cell: `results/heuristic_ledgers/`.
+Full tables: `results/heuristic_summary.md`; every run: `results/heuristic_runs.csv`;
+per-step ledgers for the first three seeds of each cell: `results/heuristic_ledgers/`.
 
 The reference agents are deterministic rules, not the object of study. They
 validate the harness and set a floor. The research question is how LLM subagents
 compare, and whether they find theory in the data or in their priors (the
-`--anonymize` contrast).
+`-anonymize` contrast).
 
 ## Layout
 
 ```
-theoryloop/worlds.py   planted-mechanism data generators and truth sets
-theoryloop/theory.py   propositions as executable claims; OLS tests
-theoryloop/agents.py   proposer / falsifier / reviser; heuristic and Claude backends
-theoryloop/loop.py     the loop, holdout gate, scoring against truth
-theoryloop/ledger.py   log of every test run
-run_benchmark.py       experiment runner, summary tables, chart
+worlds.go             planted-mechanism data generators and truth sets
+theory.go             propositions as executable claims
+stats.go              random draws, OLS, t-distribution p-values (standard library only)
+agents.go             proposer / falsifier / reviser; heuristic backend
+llm.go                Claude backend: API client, prompts, anonymization
+loop.go               the loop, holdout gate, scoring against truth
+ledger.go             log of every test run
+data.go               column-oriented data, discovery/holdout split
+theoryloop_test.go    tests
+cmd/theoryloop/       command-line tool: bench, export, summary tables, SVG chart
 docs/technical_appendix.md
 ```

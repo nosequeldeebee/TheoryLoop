@@ -1,32 +1,34 @@
-# Benchmark summary (heuristic, 50 seeds per world)
+# Benchmark summary (heuristic, 500 seeds per world)
 
-perfect = recovered every planted mechanism with correct scope and nothing else
-any_false = share of runs asserting at least one mechanism that does not exist
-tests = mean number of statistical tests in the ledger behind the final theory
-distinct_theories = how many different final theories across seeds
+- perfect: recovered every planted mechanism with correct scope and nothing else
+- any_false: share of runs asserting at least one mechanism that does not exist
+- recall_exact: share of planted mechanisms recovered with the right scope (– in the null world)
+- tests: mean number of statistical tests in the ledger behind the final theory
+- distinct_theories: how many different final theories across seeds (grows with the number of seeds)
+- modal_share: share of runs ending in the single most common final theory (stability; does not grow with seeds)
 
-|                              |   perfect |   any_false |   recall_exact |   wrong_scope |   tests |   distinct_theories |
-|:-----------------------------|----------:|------------:|---------------:|--------------:|--------:|--------------------:|
-| ('main', 'single_pass')      |      0.64 |        0.36 |           1    |          0    |   10    |                  15 |
-| ('main', 'loop')             |      0.64 |        0.36 |           1    |          0    |   29.98 |                  15 |
-| ('main', 'loop_holdout')     |      1    |        0    |           1    |          0    |   31.4  |                   1 |
-| ('scope', 'single_pass')     |      0    |        0.34 |           0    |          1.66 |   10    |                  20 |
-| ('scope', 'loop')            |      0.54 |        0.34 |           0.82 |          0.22 |   55.22 |                  24 |
-| ('scope', 'loop_holdout')    |      0.74 |        0    |           0.76 |          0.24 |   58.8  |                   9 |
-| ('confound', 'single_pass')  |      0    |        1    |           1    |          0    |   10    |                  10 |
-| ('confound', 'loop')         |      0.68 |        0.32 |           1    |          0    |   61.68 |                  12 |
-| ('confound', 'loop_holdout') |      0.9  |        0.1  |           1    |          0    |   63.04 |                   3 |
-| ('null', 'single_pass')      |      0.54 |        0.46 |         nan    |          0    |   10    |                  18 |
-| ('null', 'loop')             |      0.54 |        0.46 |         nan    |          0    |   18.6  |                  18 |
-| ('null', 'loop_holdout')     |      1    |        0    |         nan    |          0    |   19.16 |                   1 |
-| ('multi', 'single_pass')     |      0.64 |        0.36 |           1    |          0    |   10    |                  15 |
-| ('multi', 'loop')            |      0.62 |        0.36 |           0.99 |          0.02 |   47.78 |                  16 |
-| ('multi', 'loop_holdout')    |      0.98 |        0    |           0.99 |          0.02 |   50.16 |                   3 |
+| world | condition | perfect | any_false | recall_exact | wrong_scope | tests | distinct_theories | modal_share |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| main | single_pass | 0.62 | 0.38 | 1.00 | 0.00 | 10.0 | 52 | 0.62 |
+| main | loop | 0.61 | 0.38 | 0.98 | 0.01 | 30.6 | 62 | 0.61 |
+| main | loop_holdout | 0.97 | 0.02 | 0.99 | 0.00 | 32.0 | 8 | 0.97 |
+| scope | single_pass | 0.00 | 0.34 | 0.00 | 1.74 | 10.0 | 46 | 0.48 |
+| scope | loop | 0.54 | 0.34 | 0.82 | 0.30 | 55.9 | 73 | 0.40 |
+| scope | loop_holdout | 0.77 | 0.01 | 0.79 | 0.32 | 59.5 | 14 | 0.58 |
+| confound | single_pass | 0.00 | 1.00 | 1.00 | 0.00 | 10.0 | 17 | 0.65 |
+| confound | loop | 0.62 | 0.38 | 1.00 | 0.00 | 64.6 | 31 | 0.62 |
+| confound | loop_holdout | 0.93 | 0.07 | 1.00 | 0.00 | 66.0 | 7 | 0.93 |
+| null | single_pass | 0.58 | 0.42 | – | 0.00 | 10.0 | 57 | 0.58 |
+| null | loop | 0.58 | 0.42 | – | 0.00 | 18.0 | 64 | 0.58 |
+| null | loop_holdout | 0.98 | 0.02 | – | 0.00 | 18.5 | 7 | 0.98 |
+| multi | single_pass | 0.65 | 0.35 | 1.00 | 0.00 | 10.0 | 17 | 0.65 |
+| multi | loop | 0.63 | 0.35 | 0.99 | 0.02 | 48.4 | 30 | 0.63 |
+| multi | loop_holdout | 0.99 | 0.01 | 1.00 | 0.00 | 50.8 | 5 | 0.99 |
 
 ## Overall
 
-| condition    |   perfect |   any_false |
-|:-------------|----------:|------------:|
-| single_pass  |      0.36 |        0.5  |
-| loop         |      0.6  |        0.37 |
-| loop_holdout |      0.92 |        0.02 |
+| condition | perfect | any_false |
+|---|---:|---:|
+| single_pass | 0.37 | 0.50 |
+| loop | 0.60 | 0.37 |
+| loop_holdout | 0.93 | 0.03 |

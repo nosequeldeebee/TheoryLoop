@@ -37,7 +37,7 @@ first benchmark run rather than from the initial design (A6).
 ## A3. Theory as code
 
 A proposition is a triple (predictor, sign, optional scope condition on a
-binary variable). It is executable: `test_proposition` subsets to the scope,
+binary variable). It is executable: `Evaluate` subsets to the scope,
 standardizes the predictor, fits OLS, and returns whether the coefficient has
 the claimed sign at p < .05. A scoped proposition makes two claims (the effect
 holds inside the scope, and differs outside it), and the holdout gate tests both
@@ -59,7 +59,8 @@ All roles receive only their inputs; no role sees another role's reasoning.
   rules: *fails* if the base test fails; *confound* if a control with p < .01
   cuts the effect by more than half and to non-significance; *scope* if the
   interaction p < .01 and the claim holds at exactly one level. LLM version:
-  receives the same battery and decides which objections to raise.
+  receives the same battery and decides which objections to raise. An LLM
+  objection that names no real variable is discarded rather than applied.
 - **Reviser.** Applies objections mechanically: drop failed claims, replace a
   confounded claim with the confounder, add a scope condition.
 
@@ -72,56 +73,66 @@ report a statistic that was not computed. This removes one failure mode
 (fabricated results) so the benchmark can isolate the one that matters for
 theory building: judgment.
 
-**Anonymization contrast.** With `--anonymize`, predictor names are replaced
-with x1–x10 in everything the model sees and mapped back on return. Comparing
-named and anonymized runs estimates how much of an LLM loop's "theory" comes
-from the data and how much from priors about what variables called *verified*
-or *community* ought to do. The confound world is built for this: priors
-favour verification as a legitimacy signal, and in that world it is a decoy.
+**Anonymization contrast.** With `-anonymize`, predictor names are replaced
+with x1–x10 in everything the model sees and mapped back on return (a test
+checks that no real name reaches the model). Comparing named and anonymized
+runs estimates how much of an LLM loop's "theory" comes from the data and how
+much from priors about what variables called *verified* or *community* ought to
+do. The confound world is built for this: priors favour verification as a
+legitimacy signal, and in that world it is a decoy.
 
 ## A5. Ledger
 
-Every regression run by any agent is written to a JSONL ledger with the agent,
-the specification, coefficient, p-value, and whether it used held-out data.
-Ledgers for the first three seeds of every world × condition cell are in
-`results/heuristic_ledgers/`.
+Every regression run by any agent is written to a JSON Lines ledger with the
+agent, the specification, coefficient, p-value, whether it used held-out data,
+and, for LLM agents, the model's verbatim reply. Ledgers for the first three
+seeds of every world × condition cell are in `results/heuristic_ledgers/`.
 
-## A6. Results with reference agents (5 worlds × 50 seeds × 3 conditions)
+## A6. Results with reference agents (5 worlds × 500 seeds × 3 conditions)
 
-| world | condition | exact recovery | any false mechanism | tests in ledger | distinct final theories |
+*Modal share* is the fraction of runs that end in the single most common final
+theory: a measure of how stable a procedure's answer is across samples from the
+same world.
+
+| world | condition | exact recovery | any false mechanism | tests in ledger | modal share |
 |---|---|---|---|---|---|
-| main | single pass | .64 | .36 | 10 | 15 |
-| | loop | .64 | .36 | 30 | 15 |
-| | loop + holdout | **1.00** | **.00** | 31 | 1 |
-| scope | single pass | .00 | .34 | 10 | 20 |
-| | loop | .54 | .34 | 55 | 24 |
-| | loop + holdout | **.74** | **.00** | 59 | 9 |
-| confound | single pass | .00 | 1.00 | 10 | 10 |
-| | loop | .68 | .32 | 62 | 12 |
-| | loop + holdout | **.90** | **.10** | 63 | 3 |
-| null | single pass | .54 | .46 | 10 | 18 |
-| | loop | .54 | .46 | 19 | 18 |
-| | loop + holdout | **1.00** | **.00** | 19 | 1 |
-| multi | single pass | .64 | .36 | 10 | 15 |
-| | loop | .62 | .36 | 48 | 16 |
-| | loop + holdout | **.98** | **.00** | 50 | 3 |
+| main | single pass | .62 | .38 | 10 | .62 |
+| | loop | .61 | .38 | 31 | .61 |
+| | loop + holdout | **.97** | **.02** | 32 | .97 |
+| scope | single pass | .00 | .34 | 10 | .48 |
+| | loop | .54 | .34 | 56 | .40 |
+| | loop + holdout | **.77** | **.01** | 60 | .58 |
+| confound | single pass | .00 | 1.00 | 10 | .65 |
+| | loop | .62 | .38 | 65 | .62 |
+| | loop + holdout | **.93** | **.07** | 66 | .93 |
+| null | single pass | .58 | .42 | 10 | .58 |
+| | loop | .58 | .42 | 18 | .58 |
+| | loop + holdout | **.98** | **.02** | 19 | .98 |
+| multi | single pass | .65 | .35 | 10 | .65 |
+| | loop | .63 | .35 | 48 | .63 |
+| | loop + holdout | **.99** | **.01** | 51 | .99 |
+
+**Harness check.** In the null world a single pass tests ten noise variables at
+p < .05, so it should assert something in 1 − 0.95¹⁰ ≈ 40% of runs. It does so
+in 42%.
 
 Four patterns, each a hypothesis for the LLM runs:
 
 1. **Critique fixes structure, not luck.** The adversarial loop repairs
-   confounds (single-pass false-mechanism rate 1.00 → .32 in the confound world)
-   and recovers scope (exact recovery .00 → .54). It does nothing for chance
-   findings: the null world's false-discovery rate is .46 before and after
-   critique. A falsifier examining the same data that produced a lucky
-   correlation sees the same lucky correlation. Only new cases expose it.
-2. **Loops multiply forking paths.** The loop runs two to six times as many
-   tests as a single pass. Without a gate this is a garden of forking paths
-   with a rigorous-looking process on top.
-3. **Variance is a validity signal.** Across seeds, ungated procedures produce
-   10–24 different final theories per world; the gated loop converges to 1–3
-   (9 in the scope world, mostly equivalent framings). Instability across runs
-   is diagnostic of a procedure fitting noise.
-4. **Scope has a power cost.** The gate lowers scope recall (.82 → .76) because
+   confounds (false-mechanism rate in the confound world 1.00 → .38) and
+   recovers scope (exact recovery .00 → .54). It does nothing for chance
+   findings: in the null world the false-discovery rate is .42 before and after
+   critique, and the same holds in the main and multi worlds. A falsifier
+   examining the same data that produced a lucky correlation sees the same lucky
+   correlation. Only new cases expose it.
+2. **Loops multiply forking paths.** The loop runs 1.8 to 6.5 times as many
+   tests as a single pass. Without a gate this is a garden of forking paths with
+   a rigorous-looking process on top.
+3. **Instability is diagnostic.** Ungated procedures reach their most common
+   theory in 40–65% of runs; the gated loop in 93–99%. The exception is the
+   scope world (58%), where the gated loop splits between two equivalent
+   framings of the same mechanism.
+4. **Scope has a power cost.** The gate lowers scope recall (.82 → .79) because
    it demands that boundary conditions replicate too. Some true boundary
    conditions are lost in exchange for eliminating false ones.
 
@@ -141,8 +152,18 @@ Four patterns, each a hypothesis for the LLM runs:
 
 ## A8. Reproducibility
 
-All randomness is seeded (`make_world(name, seed)`; discovery/holdout split seed
-+ 10,000). The reference benchmark reproduces bit-for-bit in about 45 seconds on
-a laptop. The LLM backend uses a publicly available model through a standard
-API; model name is a command-line argument so runs can be repeated on open-weight
-models served behind a compatible endpoint.
+The benchmark is written in Go with no third-party dependencies; the
+statistics (OLS, t-distribution p-values) and random draws are implemented in
+the package and covered by tests against known values. All randomness comes from
+a PCG generator with transforms written in the package, so a seed yields the
+same data on any Go version. On a given CPU architecture, runs reproduce
+exactly; across architectures (for example x86 and Apple Silicon) the compiler
+may combine floating-point operations differently, which in rare cases can flip
+a test sitting at p = .05. The full reference benchmark (7,500 runs) takes about
+11 seconds on a two-core machine.
+
+`theoryloop export` writes the generated datasets to CSV, with each row marked
+discovery or holdout, so any result can be checked in R, Stata or Python without
+running Go. The LLM backend takes the model name as a flag, and the ledger
+stores every raw model reply, so runs can be audited and repeated on other
+models.
