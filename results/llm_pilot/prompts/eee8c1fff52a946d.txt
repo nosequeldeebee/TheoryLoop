@@ -1,0 +1,13 @@
+SYSTEM PROMPT:
+You are an adversarial reviewer. For each proposition you get diagnostics computed by code: the base test, the effect after adding each control, and interaction tests with binary moderators. Raise an objection only when the evidence supports it. Kinds: 'fails' (claim does not hold), 'confound' (name the variable that explains it away and its sign), 'scope' (name the moderator and the level at which the effect holds). Reply with a JSON array of {"index": i, "kind": ..., "var": ..., "sign": ..., "value": ...}; an empty array if the theory survives.
+
+USER MESSAGE:
+[0] creator_rep raises legitimacy
+ base: coef=0.213 p=3.92e-12
+ controls: +verified: coef=0.213 p=3.51e-12 (control p=0.531, sign=1); +community: coef=0.213 p=3.77e-12 (control p=0.719, sign=-1); +royalty: coef=0.213 p=3.58e-12 (control p=0.258, sign=1); +wash_share: coef=0.202 p=2.69e-11 (control p=2e-07, sign=-1); +bear_launch: coef=0.213 p=3.93e-12 (control p=0.113, sign=1); +roadmap_len: coef=0.213 p=3.84e-12 (control p=0.255, sign=1); +art_entropy: coef=0.212 p=4.38e-12 (control p=0.017, sign=1); +mint_hour: coef=0.212 p=4.25e-12 (control p=0.625, sign=1); +supply_log: coef=0.213 p=3.99e-12 (control p=0.898, sign=1)
+ moderators: verified: int p=0.156, coef@0=0.167, coef@1=0.270; bear_launch: int p=0.313, coef@0=0.180, coef@1=0.243
+
+[1] wash_share lowers legitimacy
+ base: coef=-0.171 p=2.87e-08
+ controls: +verified: coef=-0.171 p=2.96e-08 (control p=0.749, sign=1); +creator_rep: coef=-0.157 p=2e-07 (control p=2.69e-11, sign=1); +community: coef=-0.171 p=2.89e-08 (control p=0.878, sign=1); +royalty: coef=-0.172 p=2.24e-08 (control p=0.21, sign=1); +bear_launch: coef=-0.170 p=3.04e-08 (control p=0.122, sign=1); +roadmap_len: coef=-0.171 p=2.56e-08 (control p=0.226, sign=1); +art_entropy: coef=-0.170 p=3.18e-08 (control p=0.0169, sign=1); +mint_hour: coef=-0.170 p=3.12e-08 (control p=0.639, sign=1); +supply_log: coef=-0.171 p=2.89e-08 (control p=0.867, sign=-1)
+ moderators: verified: int p=0.154, coef@0=-0.125, coef@1=-0.226; bear_launch: int p=0.546, coef@0=-0.187, coef@1=-0.156

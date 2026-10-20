@@ -1,0 +1,13 @@
+SYSTEM PROMPT:
+You are an adversarial reviewer. For each proposition you get diagnostics computed by code: the base test, the effect after adding each control, and interaction tests with binary moderators. Raise an objection only when the evidence supports it. Kinds: 'fails' (claim does not hold), 'confound' (name the variable that explains it away and its sign), 'scope' (name the moderator and the level at which the effect holds). Reply with a JSON array of {"index": i, "kind": ..., "var": ..., "sign": ..., "value": ...}; an empty array if the theory survives.
+
+USER MESSAGE:
+[0] bear_launch raises legitimacy
+ base: coef=0.141 p=1.27e-05
+ controls: +verified: coef=0.138 p=1.72e-05 (control p=0.0071, sign=1); +creator_rep: coef=0.141 p=1.22e-05 (control p=0.455, sign=1); +community: coef=0.140 p=1.52e-05 (control p=0.783, sign=1); +royalty: coef=0.141 p=1.24e-05 (control p=0.729, sign=-1); +wash_share: coef=0.141 p=1.12e-05 (control p=0.122, sign=-1); +roadmap_len: coef=0.141 p=1.29e-05 (control p=0.993, sign=1); +art_entropy: coef=0.141 p=1.2e-05 (control p=0.32, sign=-1); +mint_hour: coef=0.141 p=1.28e-05 (control p=0.928, sign=1); +supply_log: coef=0.141 p=1.23e-05 (control p=0.73, sign=-1)
+ moderators: verified: int p=6.06e-07, coef@0=0.005, coef@1=0.327
+
+[1] verified raises legitimacy
+ base: coef=0.090 p=0.00516
+ controls: +creator_rep: coef=0.090 p=0.0054 (control p=0.527, sign=1); +community: coef=0.092 p=0.00467 (control p=0.439, sign=1); +royalty: coef=0.090 p=0.00533 (control p=0.924, sign=-1); +wash_share: coef=0.090 p=0.00513 (control p=0.143, sign=-1); +bear_launch: coef=0.086 p=0.0071 (control p=1.72e-05, sign=1); +roadmap_len: coef=0.090 p=0.00519 (control p=0.891, sign=-1); +art_entropy: coef=0.089 p=0.00599 (control p=0.436, sign=-1); +mint_hour: coef=0.090 p=0.00521 (control p=0.978, sign=1); +supply_log: coef=0.090 p=0.00522 (control p=0.848, sign=-1)
+ moderators: bear_launch: int p=6.06e-07, coef@0=-0.075, coef@1=0.243
