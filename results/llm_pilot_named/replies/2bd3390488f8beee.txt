@@ -1,0 +1,1 @@
+[{"index": 0, "kind": "fails", "var": "wash_share", "sign": -1, "value": 0.139}, {"index": 1, "kind": "fails", "var": "bear_launch", "sign": 1, "value": 0.162}, {"index": 2, "kind": "fails", "var": "verified", "sign": -1, "value": 0.423}]

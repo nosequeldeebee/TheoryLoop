@@ -1,0 +1,18 @@
+SYSTEM PROMPT:
+You are an adversarial reviewer. For each proposition you get diagnostics computed by code: the base test, the effect after adding each control, and interaction tests with binary moderators. Raise an objection only when the evidence supports it. Kinds: 'fails' (claim does not hold), 'confound' (name the variable that explains it away and its sign), 'scope' (name the moderator and the level at which the effect holds). Reply with a JSON array of {"index": i, "kind": ..., "var": ..., "sign": ..., "value": ...}; an empty array if the theory survives.
+
+USER MESSAGE:
+[0] verified raises legitimacy
+ base: coef=0.134 p=1.1e-05
+ controls: +creator_rep: coef=0.133 p=1.23e-05 (control p=0.56, sign=-1); +community: coef=0.134 p=1.13e-05 (control p=0.876, sign=-1); +royalty: coef=0.133 p=1.26e-05 (control p=0.202, sign=1); +wash_share: coef=0.134 p=1.1e-05 (control p=0.862, sign=1); +bear_launch: coef=0.138 p=4.4e-06 (control p=2.96e-06, sign=1); +roadmap_len: coef=0.134 p=1.04e-05 (control p=0.228, sign=1); +art_entropy: coef=0.138 p=5.54e-06 (control p=0.0138, sign=1); +mint_hour: coef=0.134 p=1.12e-05 (control p=0.682, sign=1); +supply_log: coef=0.134 p=1.15e-05 (control p=0.863, sign=-1)
+ moderators: bear_launch: int p=6.23e-06, coef@0=0.001, coef@1=0.270
+
+[1] bear_launch raises legitimacy
+ base: coef=0.136 p=7.38e-06
+ controls: +verified: coef=0.141 p=2.96e-06 (control p=4.4e-06, sign=1); +creator_rep: coef=0.136 p=7.32e-06 (control p=0.447, sign=-1); +community: coef=0.136 p=7.41e-06 (control p=0.794, sign=-1); +royalty: coef=0.137 p=6.27e-06 (control p=0.138, sign=1); +wash_share: coef=0.136 p=7.41e-06 (control p=0.861, sign=1); +roadmap_len: coef=0.137 p=7.12e-06 (control p=0.233, sign=1); +art_entropy: coef=0.134 p=1.09e-05 (control p=0.0452, sign=1); +mint_hour: coef=0.136 p=7.62e-06 (control p=0.698, sign=1); +supply_log: coef=0.137 p=6.71e-06 (control p=0.589, sign=-1)
+ moderators: verified: int p=6.23e-06, coef@0=0.022, coef@1=0.294
+
+[2] art_entropy raises legitimacy
+ base: coef=0.066 p=0.0296
+ controls: +verified: coef=0.075 p=0.0138 (control p=5.54e-06, sign=1); +creator_rep: coef=0.067 p=0.0289 (control p=0.442, sign=-1); +community: coef=0.066 p=0.0303 (control p=0.881, sign=-1); +royalty: coef=0.066 p=0.0298 (control p=0.172, sign=1); +wash_share: coef=0.067 p=0.0295 (control p=0.87, sign=1); +bear_launch: coef=0.061 p=0.0452 (control p=1.09e-05, sign=1); +roadmap_len: coef=0.066 p=0.0302 (control p=0.254, sign=1); +mint_hour: coef=0.067 p=0.029 (control p=0.631, sign=1); +supply_log: coef=0.067 p=0.0282 (control p=0.675, sign=-1)
+ moderators: verified: int p=0.499, coef@0=0.057, coef@1=0.097; bear_launch: int p=0.282, coef@0=0.094, coef@1=0.029

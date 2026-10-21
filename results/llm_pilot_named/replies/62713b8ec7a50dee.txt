@@ -1,0 +1,1 @@
+[{"index": 1, "kind": "confound", "var": "verified", "sign": "+", "value": "adding verified moves wash_share from p=0.0468 to p=0.0634; verified is strongly positive (p=2.2e-06) and the base effect is only marginal"}, {"index": 2, "kind": "fails", "var": null, "sign": null, "value": "base coef=-0.047, p=0.138, not significant and unchanged under every control"}]

@@ -1,0 +1,1 @@
+[{"predictor": "x2", "sign": 1}, {"predictor": "x5", "sign": -1}, {"predictor": "x9", "sign": -1}]

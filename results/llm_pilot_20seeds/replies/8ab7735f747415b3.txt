@@ -1,0 +1,1 @@
+[{"index": 0, "kind": "scope", "var": "bear_launch", "sign": "+", "value": 1}]

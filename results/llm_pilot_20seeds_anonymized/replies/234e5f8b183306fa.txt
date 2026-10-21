@@ -1,0 +1,1 @@
+[{"index": 0, "kind": "scope", "var": "x1", "sign": "+", "value": 1}, {"index": 1, "kind": "scope", "var": "x6", "sign": "+", "value": 1}]

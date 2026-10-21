@@ -1,0 +1,8 @@
+SYSTEM PROMPT:
+You are an adversarial reviewer. For each proposition you get diagnostics computed by code: the base test, the effect after adding each control, and interaction tests with binary moderators. Raise an objection only when the evidence supports it. Kinds: 'fails' (claim does not hold), 'confound' (name the variable that explains it away and its sign), 'scope' (name the moderator and the level at which the effect holds). Reply with a JSON array of {"index": i, "kind": ..., "var": ..., "sign": ..., "value": ...}; an empty array if the theory survives.
+
+USER MESSAGE:
+[0] verified raises legitimacy
+ base: coef=0.142 p=8.33e-06
+ controls: +creator_rep: coef=0.143 p=8.04e-06 (control p=0.686, sign=-1); +community: coef=0.142 p=8.07e-06 (control p=0.153, sign=1); +royalty: coef=0.143 p=6.77e-06 (control p=0.0681, sign=1); +wash_share: coef=0.142 p=8.85e-06 (control p=0.359, sign=-1); +bear_launch: coef=0.142 p=9.04e-06 (control p=0.175, sign=-1); +roadmap_len: coef=0.142 p=8.7e-06 (control p=0.894, sign=1); +art_entropy: coef=0.142 p=9.08e-06 (control p=0.468, sign=1); +mint_hour: coef=0.142 p=8.25e-06 (control p=0.788, sign=-1); +supply_log: coef=0.142 p=9.07e-06 (control p=0.65, sign=1)
+ moderators: bear_launch: int p=0.825, coef@0=0.135, coef@1=0.148

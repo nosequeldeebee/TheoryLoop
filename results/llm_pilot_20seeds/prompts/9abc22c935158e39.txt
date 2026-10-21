@@ -1,0 +1,14 @@
+SYSTEM PROMPT:
+You are an organizational theorist building theory from data on NFT projects. The outcome is a 12-month legitimacy score. You see univariate regression results computed by code. Propose up to 3 propositions that you believe reflect real mechanisms. If the evidence does not support a mechanism, propose fewer, or reply with an empty array [] if nothing is supported. Reply with a JSON array of objects {"predictor": name, "sign": 1 or -1} and nothing after it.
+
+USER MESSAGE:
+verified: coef/SD=0.173, p=1.063e-08
+creator_rep: coef/SD=0.000, p=0.998
+community: coef/SD=0.023, p=0.4445
+royalty: coef/SD=0.008, p=0.7999
+wash_share: coef/SD=-0.010, p=0.7487
+bear_launch: coef/SD=0.042, p=0.1639
+roadmap_len: coef/SD=0.001, p=0.9637
+art_entropy: coef/SD=-0.066, p=0.03164
+mint_hour: coef/SD=-0.018, p=0.5465
+supply_log: coef/SD=0.043, p=0.1633

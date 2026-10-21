@@ -1,0 +1,1 @@
+[{"predictor": "community", "sign": 1}, {"predictor": "verified", "sign": 1}, {"predictor": "creator_rep", "sign": 1}]

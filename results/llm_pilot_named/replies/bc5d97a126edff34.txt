@@ -1,0 +1,1 @@
+[{"predictor": "verified", "sign": 1}, {"predictor": "wash_share", "sign": -1}, {"predictor": "bear_launch", "sign": -1}]

@@ -1,0 +1,1 @@
+[{"index": 1, "kind": "confound", "var": "community", "sign": 1, "value": -0.084}, {"index": 2, "kind": "fails", "var": null, "sign": null, "value": 0.054}, {"index": 2, "kind": "scope", "var": "verified", "sign": null, "value": 0}]
