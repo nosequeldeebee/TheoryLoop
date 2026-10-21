@@ -1,0 +1,13 @@
+SYSTEM PROMPT:
+You are an adversarial reviewer. For each proposition you get diagnostics computed by code: the base test, the effect after adding each control, and interaction tests with binary moderators. Raise an objection only when the evidence supports it. Kinds: 'fails' (claim does not hold), 'confound' (name the variable that explains it away and its sign), 'scope' (name the moderator and the level at which the effect holds). Reply with a JSON array of {"index": i, "kind": ..., "var": ..., "sign": ..., "value": ...}; an empty array if the theory survives.
+
+USER MESSAGE:
+[0] community raises legitimacy
+ base: coef=0.404 p=4.79e-38
+ controls: +verified: coef=0.366 p=8.2e-24 (control p=0.046, sign=1); +creator_rep: coef=0.404 p=5.23e-38 (control p=0.985, sign=-1); +royalty: coef=0.404 p=5.57e-38 (control p=0.82, sign=1); +wash_share: coef=0.404 p=5.32e-38 (control p=0.964, sign=-1); +bear_launch: coef=0.405 p=4e-38 (control p=0.218, sign=1); +roadmap_len: coef=0.405 p=6.13e-38 (control p=0.84, sign=1); +art_entropy: coef=0.404 p=4.7e-38 (control p=0.041, sign=-1); +mint_hour: coef=0.404 p=7.07e-38 (control p=0.659, sign=-1); +supply_log: coef=0.406 p=2.42e-38 (control p=0.159, sign=1)
+ moderators: verified: int p=0.78, coef@0=0.317, coef@1=0.300; bear_launch: int p=0.942, coef@0=0.412, coef@1=0.397
+
+[1] verified raises legitimacy
+ base: coef=0.267 p=1.01e-16
+ controls: +creator_rep: coef=0.267 p=1.05e-16 (control p=0.95, sign=-1); +community: coef=0.071 p=0.046 (control p=8.2e-24, sign=1); +royalty: coef=0.266 p=1.15e-16 (control p=0.921, sign=1); +wash_share: coef=0.267 p=1.01e-16 (control p=0.736, sign=-1); +bear_launch: coef=0.266 p=1.16e-16 (control p=0.372, sign=1); +roadmap_len: coef=0.267 p=1.26e-16 (control p=0.98, sign=-1); +art_entropy: coef=0.264 p=1.81e-16 (control p=0.0886, sign=-1); +mint_hour: coef=0.266 p=1.53e-16 (control p=0.812, sign=-1); +supply_log: coef=0.267 p=9.75e-17 (control p=0.435, sign=1)
+ moderators: bear_launch: int p=0.148, coef@0=0.311, coef@1=0.221

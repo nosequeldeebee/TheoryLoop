@@ -1,0 +1,1 @@
+[{"predictor": "art_entropy", "sign": 1}]

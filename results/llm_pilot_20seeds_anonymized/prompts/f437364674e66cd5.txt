@@ -1,0 +1,13 @@
+SYSTEM PROMPT:
+You are an adversarial reviewer. For each proposition you get diagnostics computed by code: the base test, the effect after adding each control, and interaction tests with binary moderators. Raise an objection only when the evidence supports it. Kinds: 'fails' (claim does not hold), 'confound' (name the variable that explains it away and its sign), 'scope' (name the moderator and the level at which the effect holds). Reply with a JSON array of {"index": i, "kind": ..., "var": ..., "sign": ..., "value": ...}; an empty array if the theory survives.
+
+USER MESSAGE:
+[0] x1 raises legitimacy
+ base: coef=0.164 p=9.29e-07
+ controls: +x2: coef=0.164 p=9.7e-07 (control p=0.141, sign=1); +x3: coef=0.168 p=6.12e-07 (control p=0.223, sign=-1); +x4: coef=0.166 p=6.88e-07 (control p=0.103, sign=-1); +x5: coef=0.164 p=9.49e-07 (control p=0.94, sign=1); +x6: coef=0.161 p=1.49e-06 (control p=0.00151, sign=1); +x7: coef=0.164 p=9.99e-07 (control p=0.604, sign=1); +x8: coef=0.165 p=9.01e-07 (control p=0.458, sign=-1); +x9: coef=0.164 p=9.96e-07 (control p=0.191, sign=-1); +x10: coef=0.164 p=1.03e-06 (control p=0.518, sign=-1)
+ moderators: x6: int p=0.000919, coef@0=0.050, coef@1=0.272
+
+[1] x6 raises legitimacy
+ base: coef=0.111 p=0.000931
+ controls: +x1: coef=0.106 p=0.00151 (control p=1.49e-06, sign=1); +x2: coef=0.111 p=0.000956 (control p=0.139, sign=1); +x3: coef=0.111 p=0.00102 (control p=0.482, sign=-1); +x4: coef=0.111 p=0.000917 (control p=0.149, sign=-1); +x5: coef=0.112 p=0.000889 (control p=0.731, sign=1); +x7: coef=0.113 p=0.000818 (control p=0.426, sign=1); +x8: coef=0.111 p=0.00093 (control p=0.488, sign=-1); +x9: coef=0.112 p=0.00082 (control p=0.151, sign=-1); +x10: coef=0.112 p=0.000893 (control p=0.409, sign=-1)
+ moderators: x1: int p=0.000919, coef@0=0.016, coef@1=0.241

@@ -1,0 +1,13 @@
+SYSTEM PROMPT:
+You are an adversarial reviewer. For each proposition you get diagnostics computed by code: the base test, the effect after adding each control, and interaction tests with binary moderators. Raise an objection only when the evidence supports it. Kinds: 'fails' (claim does not hold), 'confound' (name the variable that explains it away and its sign), 'scope' (name the moderator and the level at which the effect holds). Reply with a JSON array of {"index": i, "kind": ..., "var": ..., "sign": ..., "value": ...}; an empty array if the theory survives.
+
+USER MESSAGE:
+[0] community raises legitimacy
+ base: coef=0.401 p=1.48e-32
+ controls: +verified: coef=0.383 p=4.21e-22 (control p=0.387, sign=1); +creator_rep: coef=0.401 p=1.69e-32 (control p=0.749, sign=1); +royalty: coef=0.401 p=1.68e-32 (control p=0.237, sign=1); +wash_share: coef=0.401 p=1.86e-32 (control p=0.44, sign=1); +bear_launch: coef=0.402 p=6.99e-33 (control p=0.0162, sign=-1); +roadmap_len: coef=0.400 p=2.5e-32 (control p=0.553, sign=-1); +art_entropy: coef=0.401 p=1.74e-32 (control p=0.948, sign=1); +mint_hour: coef=0.401 p=1.48e-32 (control p=0.401, sign=1); +supply_log: coef=0.402 p=1.12e-32 (control p=0.37, sign=1)
+ moderators: verified: int p=0.801, coef@0=0.323, coef@1=0.323; bear_launch: int p=0.141, coef@0=0.366, coef@1=0.443
+
+[1] verified raises legitimacy
+ base: coef=0.240 p=3.49e-12
+ controls: +creator_rep: coef=0.240 p=3.69e-12 (control p=0.683, sign=1); +community: coef=0.033 p=0.387 (control p=4.21e-22, sign=1); +royalty: coef=0.239 p=4.77e-12 (control p=0.33, sign=1); +wash_share: coef=0.240 p=3.4e-12 (control p=0.314, sign=1); +bear_launch: coef=0.243 p=1.69e-12 (control p=0.0178, sign=-1); +roadmap_len: coef=0.239 p=4.87e-12 (control p=0.421, sign=-1); +art_entropy: coef=0.240 p=3.91e-12 (control p=0.926, sign=1); +mint_hour: coef=0.241 p=3.03e-12 (control p=0.345, sign=1); +supply_log: coef=0.240 p=3.54e-12 (control p=0.725, sign=1)
+ moderators: bear_launch: int p=0.391, coef@0=0.271, coef@1=0.214

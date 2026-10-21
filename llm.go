@@ -158,6 +158,17 @@ func toStr(v any) string {
 
 // ------------------------------------------------------------- LLM agents
 
+// proposerSystemV1 is the original proposer prompt. Run with -prompt-v1 to
+// reproduce results/llm_pilot_named. It tells the model to "propose up to N"
+// claims, which in the pilot it treated as a target: 23 of its 54 claims had no
+// support (p > .05) in the table it was shown.
+const proposerSystemV1 = "You are an organizational theorist building theory from data on NFT projects. " +
+	"The outcome is a 12-month legitimacy score. You see univariate regression results computed by code. " +
+	"Propose up to %d propositions that you believe reflect real mechanisms. Reply with a JSON array of " +
+	`objects {"predictor": name, "sign": 1 or -1} and nothing after it.`
+
+// proposerSystem is the default proposer prompt. It differs from V1 only in
+// that it says fewer claims, or none, is an acceptable answer.
 const proposerSystem = "You are an organizational theorist building theory from data on NFT projects. " +
 	"The outcome is a 12-month legitimacy score. You see univariate regression results computed by code. " +
 	"Propose up to %d propositions that you believe reflect real mechanisms. If the evidence does not " +
@@ -170,6 +181,7 @@ type LLMProposer struct {
 	Model     string
 	K         int
 	Anonymize bool
+	PromptV1  bool // use the original prompt (proposerSystemV1)
 	Call      Caller
 }
 
@@ -183,7 +195,11 @@ func (a LLMProposer) Propose(d Data, l *Ledger) ([]Proposition, error) {
 	for _, r := range univariateTable(d, l, "proposer") {
 		lines = append(lines, fmt.Sprintf("%s: coef/SD=%.3f, p=%.4g", fwd[r.Predictor], r.Coef, r.P))
 	}
-	reply, err := a.Call(fmt.Sprintf(proposerSystem, k), strings.Join(lines, "\n"), a.Model, 1500)
+	prompt := proposerSystem
+	if a.PromptV1 {
+		prompt = proposerSystemV1
+	}
+	reply, err := a.Call(fmt.Sprintf(prompt, k), strings.Join(lines, "\n"), a.Model, 1500)
 	if err != nil {
 		return nil, fmt.Errorf("proposer: %w", err)
 	}
@@ -223,6 +239,9 @@ type LLMFalsifier struct {
 }
 
 func (a LLMFalsifier) Critique(theory []Proposition, d Data, l *Ledger) ([]Objection, error) {
+	if len(theory) == 0 {
+		return nil, nil // nothing to review, and an empty message cannot be sent
+	}
 	fwd, inv := nameMap(a.Anonymize)
 	show := func(s string) string { return fwd[s] }
 	var blocks []string

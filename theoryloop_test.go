@@ -2,7 +2,10 @@ package theoryloop
 
 import (
 	"encoding/json"
+	"errors"
 	"math"
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 )
@@ -221,5 +224,52 @@ func TestLLMObjectionNamingNoVariableIsDropped(t *testing.T) {
 	obs, err := LLMFalsifier{Call: fake.call}.Critique([]Proposition{P("verified", 1)}, w.Data, &Ledger{})
 	if err != nil || len(obs) != 0 {
 		t.Fatalf("got %v, %v", obs, err)
+	}
+}
+
+func TestFileCallerWritesPromptThenReadsReply(t *testing.T) {
+	dir := t.TempDir()
+	fc := &FileCaller{Dir: dir}
+	if _, err := fc.Call("sys", "usr", "m", 100); !errors.Is(err, ErrPending) {
+		t.Fatalf("want ErrPending, got %v", err)
+	}
+	id := PromptID("sys", "usr", "m")
+	if b, err := os.ReadFile(filepath.Join(dir, "pending", id+".txt")); err != nil || !strings.Contains(string(b), "usr") {
+		t.Fatalf("pending prompt not written: %v", err)
+	}
+	os.MkdirAll(filepath.Join(dir, "replies"), 0o755)
+	os.WriteFile(filepath.Join(dir, "replies", id+".txt"), []byte(`[{"predictor":"verified","sign":1}]`), 0o644)
+	got, err := fc.Call("sys", "usr", "m", 100)
+	if err != nil || !strings.Contains(got, "verified") {
+		t.Fatalf("got %q, %v", got, err)
+	}
+}
+
+func TestEmptyProposalIsAValidTheory(t *testing.T) {
+	w := mustWorld(t, "null", 0, 2000)
+	fake := &fakeClaude{replies: []string{"[]"}}
+	theory, err := LLMProposer{Call: fake.call}.Propose(w.Data, &Ledger{})
+	if err != nil || len(theory) != 0 {
+		t.Fatalf("got %v, %v", theory, err)
+	}
+	// the falsifier must not be called (or fail) on an empty theory
+	obs, err := LLMFalsifier{Call: fake.call}.Critique(nil, w.Data, &Ledger{})
+	if err != nil || obs != nil || len(fake.calls) != 1 {
+		t.Fatalf("falsifier on empty theory: %v %v, calls=%d", obs, err, len(fake.calls))
+	}
+}
+
+func TestPromptVersionsDiffer(t *testing.T) {
+	w := mustWorld(t, "null", 0, 2000)
+	fake := &fakeClaude{replies: []string{"[]", "[]"}}
+	var systems []string
+	rec := func(system, user, model string, n int) (string, error) {
+		systems = append(systems, system)
+		return fake.call(system, user, model, n)
+	}
+	LLMProposer{Call: rec}.Propose(w.Data, &Ledger{})
+	LLMProposer{Call: rec, PromptV1: true}.Propose(w.Data, &Ledger{})
+	if systems[0] == systems[1] || !strings.Contains(systems[0], "empty array") || strings.Contains(systems[1], "empty array") {
+		t.Fatal("v1 and v2 prompts should differ in the empty-answer sentence only")
 	}
 }

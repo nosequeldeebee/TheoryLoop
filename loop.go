@@ -17,6 +17,7 @@ type Config struct {
 	Backend   string // "heuristic" or "llm"
 	Model     string // llm only
 	Anonymize bool   // llm only: hide variable names from the model
+	PromptV1  bool   // llm only: use the original proposer prompt
 	MaxIter   int    // falsifier-reviser rounds; default 6
 	Call      Caller // llm only; nil means ClaudeCaller
 }
@@ -56,7 +57,7 @@ func agentsFor(cfg Config) (Proposer, Falsifier, error) {
 		if model == "" {
 			model = DefaultModel
 		}
-		return LLMProposer{Model: model, K: 3, Anonymize: cfg.Anonymize, Call: call},
+		return LLMProposer{Model: model, K: 3, Anonymize: cfg.Anonymize, PromptV1: cfg.PromptV1, Call: call},
 			LLMFalsifier{Model: model, Anonymize: cfg.Anonymize, Call: call}, nil
 	}
 	return nil, nil, fmt.Errorf("unknown backend %q", cfg.Backend)

@@ -77,6 +77,8 @@ func bench(args []string) error {
 	out := fs.String("out", "results", "output directory")
 	workers := fs.Int("workers", 0, "parallel runs (default: number of CPUs for heuristic, 4 for llm)")
 	n := fs.Int("n", 2000, "projects per world")
+	v1 := fs.Bool("prompt-v1", false, "llm backend: use the original proposer prompt (no 'empty answer is fine')")
+	replay := fs.String("replay", "", "llm backend: answer model calls from files in this directory instead of the API (see FileCaller)")
 	fs.Parse(args)
 
 	worlds, err := worldList(*worldsFlag)
@@ -86,8 +88,8 @@ func bench(args []string) error {
 	if *backend != "heuristic" && *backend != "llm" {
 		return fmt.Errorf("unknown backend %q", *backend)
 	}
-	if *backend == "llm" && os.Getenv("ANTHROPIC_API_KEY") == "" {
-		return fmt.Errorf("the llm backend needs ANTHROPIC_API_KEY")
+	if *backend == "llm" && *replay == "" && os.Getenv("ANTHROPIC_API_KEY") == "" {
+		return fmt.Errorf("the llm backend needs ANTHROPIC_API_KEY (or -replay DIR)")
 	}
 	if *workers <= 0 {
 		*workers = runtime.NumCPU()
@@ -103,7 +105,10 @@ func bench(args []string) error {
 	if err := os.MkdirAll(ledgerDir, 0o755); err != nil {
 		return err
 	}
-	cfg := tl.Config{Backend: *backend, Model: *model, Anonymize: *anon}
+	cfg := tl.Config{Backend: *backend, Model: *model, Anonymize: *anon, PromptV1: *v1}
+	if *replay != "" {
+		cfg.Call = (&tl.FileCaller{Dir: *replay}).Call
+	}
 
 	type job struct {
 		world string
@@ -162,8 +167,19 @@ func bench(args []string) error {
 	}
 
 	var flat []tl.Result
+	pending := 0
 	for _, rs := range results {
 		flat = append(flat, rs...)
+		for _, r := range rs {
+			if strings.Contains(r.Err, "reply pending") {
+				pending++
+			}
+		}
+	}
+	if pending > 0 {
+		fmt.Printf("%d of %d runs are waiting for replies; prompts are in %s/pending. Supply replies in %s/replies and run again.\n",
+			pending, len(flat), *replay, *replay)
+		return nil
 	}
 	if err := writeRuns(filepath.Join(*out, tag+"_runs.csv"), flat); err != nil {
 		return err

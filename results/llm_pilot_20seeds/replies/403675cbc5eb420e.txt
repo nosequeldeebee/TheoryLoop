@@ -1,0 +1,1 @@
+[{"index": 0, "kind": "scope", "var": "verified", "sign": 1, "value": 1}, {"index": 1, "kind": "scope", "var": "bear_launch", "sign": 1, "value": 1}]

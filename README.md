@@ -34,6 +34,13 @@ go run ./cmd/theoryloop bench -backend llm -seeds 10              # Claude subag
 go run ./cmd/theoryloop bench -backend llm -seeds 10 -anonymize   # same, variable names hidden
 ```
 
+To run the LLM backend without an API key, add `-replay DIR`. Each model call is
+then written to `DIR/pending/<id>.txt` and the run waits for a reply in
+`DIR/replies/<id>.txt`; rerun `bench` after supplying replies until nothing is
+pending. Anything that can read and write a file can answer: a person, a script,
+or a Claude subagent. `results/llm_pilot_named/` (original prompt, 4 datasets per world), `results/llm_pilot_v2/` (proposer may answer "nothing supported", 4 per world) and `results/llm_pilot_20seeds/` (same prompt as v2, 20 per world) and `results/llm_pilot_20seeds_anonymized/` (the same with variables hidden) are pilots run this way, with
+every prompt and reply kept.
+
 Or build a single binary with `go build -o theoryloop ./cmd/theoryloop`.
 
 Useful `bench` flags: `-worlds confound,null` to run a subset, `-model` to choose
