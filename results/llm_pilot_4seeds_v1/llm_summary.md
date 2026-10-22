@@ -1,8 +1,10 @@
-# Benchmark summary (llm, 4 seeds per world)
+# LLM results summary with old prompt (4 seeds per world)
+
+This is an initial summary based on using an LLM to run the procedure using the old proposer prompt, with just 4 seeds per world. Full LLM pilot was run with 20 seeds per world.
 
 - perfect: recovered every planted mechanism with correct scope and nothing else
 - any_false: share of runs asserting at least one mechanism that does not exist
-- recall_exact: share of planted mechanisms recovered with the right scope (– in the null world)
+- recall_exact: share of planted mechanisms recovered with the right scope ("–" in the null world)
 - tests: mean number of statistical tests in the ledger behind the final theory
 - distinct_theories: how many different final theories across seeds (grows with the number of seeds)
 - modal_share: share of runs ending in the single most common final theory (stability; does not grow with seeds)

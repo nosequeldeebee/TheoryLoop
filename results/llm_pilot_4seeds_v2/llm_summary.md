@@ -1,4 +1,6 @@
-# Benchmark summary (llm, 4 seeds per world)
+# LLM results summary with new prompt (4 seeds per world)
+
+This is an initial summary based on using an LLM to run the procedure using the new proposer prompt, with just 4 seeds per world. Full LLM pilot was run with 20 seeds per world.
 
 - perfect: recovered every planted mechanism with correct scope and nothing else
 - any_false: share of runs asserting at least one mechanism that does not exist
