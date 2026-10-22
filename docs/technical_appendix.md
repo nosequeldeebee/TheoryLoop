@@ -32,7 +32,7 @@ with either variable as focal: "verification matters in bear markets" and
 "bear-market launches matter for verified projects" fit the data identically.
 Which one is the theory is a framing decision the data cannot make. The scorer
 treats such statements as one slot and accepts either. This emerged from the
-first benchmark run rather than from the initial design (A6).
+first benchmark run rather than from the initial design.
 
 ## A3. Theory as code
 
@@ -116,7 +116,7 @@ same world.
 p < .05, so it should assert something in 1 − 0.95¹⁰ ≈ 40% of runs. It does so
 in 42%.
 
-Four patterns, each a hypothesis for the LLM runs:
+Three patterns from these benchmark runs:
 
 1. **Critique fixes structure, not luck.** The adversarial loop repairs
    confounds (false-mechanism rate in the confound world 1.00 → .38) and
@@ -129,12 +129,9 @@ Four patterns, each a hypothesis for the LLM runs:
    tests as a single pass. Without a gate this is a garden of forking paths with
    a rigorous-looking process on top.
 3. **Instability is diagnostic.** Ungated procedures reach their most common
-   theory in 40–65% of runs; the gated loop in 93–99%. The exception is the
-   scope world (58%), where the gated loop splits between two equivalent
-   framings of the same mechanism.
-4. **Scope has a power cost.** The gate lowers scope recall (.82 → .79) because
-   it demands that boundary conditions replicate too. Some true boundary
-   conditions are lost in exchange for eliminating false ones.
+   theory in 40–65% of runs; the gated loop in 93–99%. The exception is the 
+   scope world (58%). Most runs state both equivalent framings together; 
+   in the rest, the gate strips one framing or the scope itself. 
 
 ## A7. Known limitations of the current prototype
 
@@ -145,10 +142,9 @@ Four patterns, each a hypothesis for the LLM runs:
 - The scope condition is the only theoretical move beyond main effects; theory
   building also involves construct redefinition, which this benchmark does not
   test.
-- Reference agents are rules. LLM results are not yet in.
+- Reference agents are rules. The LLM results are a pilot: 20 datasets per world (100 runs per condition), named and anonymized. Replies came from Claude subagents through reply files (`-replay`), not from direct API calls. Each prompt got one reply, so Claude's own sampling variance is not measured. Each Claude agent is a single call over a table computed by code, with no tools. See `results/llm_pilot_20seeds/` and `results/llm_pilot_20seeds_anonymized/`.
 - The holdout gate is a single split; the gated rate of false mechanisms is
-  bounded by alpha per surviving claim, not by a family-wise correction across
-  the ledger.
+  bounded by p < .05 per surviving claim, not by a family-wise correction. 
 
 ## A8. Reproducibility
 
@@ -157,13 +153,13 @@ statistics (OLS, t-distribution p-values) and random draws are implemented in
 the package and covered by tests against known values. All randomness comes from
 a PCG generator with transforms written in the package, so a seed yields the
 same data on any Go version. On a given CPU architecture, runs reproduce
-exactly; across architectures (for example x86 and Apple Silicon) the compiler
-may combine floating-point operations differently, which in rare cases can flip
+exactly; across architectures the compiler
+may combine floating-point operations differently, which in rare cases can change the results of 
 a test sitting at p = .05. The full reference benchmark (7,500 runs) takes about
 11 seconds on a two-core machine.
 
 `theoryloop export` writes the generated datasets to CSV, with each row marked
-discovery or holdout, so any result can be checked in R, Stata or Python without
+discovery or holdout, so any result can be checked in without
 running Go. The LLM backend takes the model name as a flag, and the ledger
 stores every raw model reply, so runs can be audited and repeated on other
 models.

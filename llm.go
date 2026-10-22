@@ -159,7 +159,7 @@ func toStr(v any) string {
 // ------------------------------------------------------------- LLM agents
 
 // proposerSystemV1 is the original proposer prompt. Run with -prompt-v1 to
-// reproduce results/llm_pilot_named. It tells the model to "propose up to N"
+// reproduce results/llm_pilot_4seeds_v1. It tells the model to "propose up to N"
 // claims, which in the pilot it treated as a target: 23 of its 54 claims had no
 // support (p > .05) in the table it was shown.
 const proposerSystemV1 = "You are an organizational theorist building theory from data on NFT projects. " +
