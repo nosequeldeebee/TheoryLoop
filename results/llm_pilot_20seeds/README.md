@@ -3,7 +3,7 @@
 Claude subagents as proposer and falsifier, new proposer prompt (an empty answer is allowed), named variables.
 Seeds 0-19 of all five worlds, answered through `-replay`. 222 model calls, each prompt stored in `prompts/` beside its reply in `replies/`.
 
-- Seeds 0-3 reuse the 44 replies from `../llm_pilot_v2` (ids in `reused_from_earlier_pilots.txt`); 178 replies are new.
+- Seeds 0-3 reuse the 44 replies from `../llm_pilot_4seeds_v2` (ids in `reused_from_earlier_pilots.txt`); 178 replies are new.
 - `heuristic_same_seeds/` holds the rule-based agents on the same 20 datasets per world, for a like-for-like comparison.
 - Replies came from Claude subagents inside Claude Code, not the raw Messages API. Each agent is a single stateless call. One subagent wrote its ten falsifier replies in a shell loop; all ten were checked against their diagnostics.
 - Variable names are shown. The anonymized contrast (`-anonymize`) has not been run.
