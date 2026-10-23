@@ -28,7 +28,7 @@ Requires Go 1.24 or later.
 
 ```bash
 go test ./...                                   # 15 tests, no API key needed
-go run ./cmd/theoryloop bench                   # code-based reference subagents: 5 worlds x 500 seeds x 3 subagents/conditions (~10 s)
+go run ./cmd/theoryloop bench                   # code-based reference subagents: 5 worlds x 500 seeds x 3 conditions (see below) (~10 s)
 go run ./cmd/theoryloop export                  # write the generated datasets to data/ as CSV
 
 export ANTHROPIC_API_KEY=...
@@ -49,7 +49,7 @@ the model, `-workers` for parallel runs (default 4 for the LLM backend, which
 retries rate-limit erros with backoff). A run whose model call fails is
 recorded with its error and excluded from the summary, rather than stopping the run.
 
-## The data
+## Data
 
 There are no input files: each world is generated from its seed by `MakeWorld`
 in `worlds.go`. `data/` holds the
@@ -65,7 +65,7 @@ row as `discovery` or `holdout`; `data/truth.json` lists the planted mechanisms.
 | `null` | nothing | false theory from noise |
 | `multi` | wash trading above 30% destroys legitimacy; creator reputation helps | multiple mechanisms, nonlinearity |
 
-## Conditions
+## Conditions 
 
 - `single_pass`: proposer only, no falsifier 
 - `loop`: proposer → falsifier → reviser, repeated until no objections
