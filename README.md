@@ -1,4 +1,6 @@
-# theoryloop
+[![Go](https://github.com/nosequeldeebee/TheoryLoop/actions/workflows/go.yml/badge.svg)](https://github.com/nosequeldeebee/TheoryLoop/actions/workflows/go.yml)
+
+# TheoryLoop
 
 **A planted-mechanism benchmark for AI theory-building loops.**
 
