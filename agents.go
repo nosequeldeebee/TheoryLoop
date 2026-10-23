@@ -12,7 +12,6 @@ import (
 //	Proposer   looks at discovery data and proposes propositions.
 //	Falsifier  tries to break the theory: does each claim fail, is it
 //	           confounded by another variable, does it vanish in a subgroup?
-//	           (Reviewer 2 as a process.)
 //	Revise     turns objections into revisions: drop, replace with the
 //	           confounder, or add a scope condition.
 //

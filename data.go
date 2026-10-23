@@ -6,7 +6,7 @@ type Data struct {
 	Cols map[string][]float64
 }
 
-// Col returns a variable's column.
+// Col returns a variable's column name.
 func (d Data) Col(name string) []float64 { return d.Cols[name] }
 
 // Rows returns the rows at idx, in that order.
