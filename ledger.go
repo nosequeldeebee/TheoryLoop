@@ -8,10 +8,12 @@ import (
 
 // The ledger records every test any agent runs.
 //
-// Loops are forking-path machines. A loop that tries 200 specifications and
+// Loops are forking-path (Gelman & Loken, 2013) machines. A loop that tries 200 specifications and
 // reports the 3 that worked looks rigorous and is not. The ledger makes the
 // garden of forking paths visible, so the number of tests behind each claim
 // can be reported and corrected for.
+//
+// Gelman, A., & Loken, E. (2013). The garden of forking paths: Why multiple comparisons can be a problem, even when there is no “fishing expedition” or “p-hacking” and the research hypothesis was posited ahead of time. Department of Statistics, Columbia University, 348(1-17), 3.
 
 // Entry is one ledger line.
 type Entry struct {
