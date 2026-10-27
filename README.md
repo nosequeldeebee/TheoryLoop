@@ -73,7 +73,7 @@ row as `discovery` or `holdout`; `data/truth.json` lists the planted mechanisms.
 
 ## Results 
 
-### Reference (code-based) agent results:
+Reference (code-based) agent results:
 
 | condition | recovered planted theory exactly | asserted a non-existent mechanism |
 |---|---|---|
@@ -81,7 +81,7 @@ row as `discovery` or `holdout`; `data/truth.json` lists the planted mechanisms.
 | adversarial loop | 60% | 37% |
 | loop + holdout gate | 93% | 3% |
 
-### LLM (Claude) agent results:
+LLM (Claude) agent results:
 
 | condition | named variables:<br>recovered planted theory exactly / asserted a non-existent mechanism | anonymized variables:<br>recovered planted theory exactly / asserted a non-existent mechanism |
 |---|---|---|
@@ -93,8 +93,8 @@ Full tables: `results/heuristic_summary.md`; every run: `results/heuristic_runs.
 per-step ledgers for the first three seeds of each cell: `results/heuristic_ledgers/`. LLM results
 are in the corresponding subfolders in `results`
 
-The reference subagents are deterministic rules, not the object of study. They
-validate the workflow and set the benchmark. The research question is how LLM subagents
+The reference subagents are deterministic rules. They
+validate the workflow. The research question is how LLM subagents
 compare, and whether they find theory in the data or in their priors (the
 `-anonymize` contrast).
 

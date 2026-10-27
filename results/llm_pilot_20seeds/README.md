@@ -16,4 +16,4 @@ Seeds 0-19 of all five worlds, answered through `-replay`. 222 model calls, each
 | adversarial loop | 92% / 2% | 61% / 38% |
 | loop + holdout gate | 98% / 0% | 96% / 2% |
 
-Fisher exact: single pass p = .0045 (perfect), p = .0001 (false claims); loop p < .0001 for both; with the holdout gate p = .68 and .50.
+Fisher exact: single pass p = .0045 (perfect), p = .0001 (false claims); loop p < .0001 for both; with the holdout gate p = .68 and .50. Therefore, Claude performs better before the holdout gate, but no evidence that Claude or rules-based performs better after the holdout gate.
