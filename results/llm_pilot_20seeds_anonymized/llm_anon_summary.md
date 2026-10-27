@@ -1,4 +1,4 @@
-# Benchmark summary (llm_anon, 20 seeds per world)
+# Results summary (llm with variables anonymized, 20 seeds per world)
 
 - perfect: recovered every planted mechanism with correct scope and nothing else
 - any_false: share of runs asserting at least one mechanism that does not exist

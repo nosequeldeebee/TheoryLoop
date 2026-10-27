@@ -1,4 +1,4 @@
-# Benchmark summary (code/rules-based, not LLM, 500 seeds per world)
+# Reference workflow summary (code/rules-based, not LLM, 500 seeds per world)
 
 - perfect: recovered every planted mechanism with correct scope and nothing else
 - any_false: share of runs asserting at least one mechanism that does not exist
